@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+html, body {
+  background: #0b0b38;
+  color: white;
+  font-family: 'Balsamiq Sans', cursive;
+  padding: 0px 23px 0 23px;
+}
+
+hr {
+  border-radius: 7px;
+  background-color: white;
+}
+
+.headline-trennlinie {
+  margin-bottom: 30px;
+}
+
+.headline-trennlinie hr {
+  border: 3px solid white;
+  margin-top: -10px;
+}
+
+.subheadline-trennlinie {
+  margin-bottom: 15px;
+}
+
+.subheadline-trennlinie hr {
+  border: 1.2px solid white;
+  margin-top: -10px;
+}
+
+.active {
+  content: url(../icons/ToDo-Box-Done.svg);
+}
+
+.shoppinglist-home hr {
+  border: 0.3px solid #8F8F8F;
+}
+
+.shoppinglist-home .shoppinglist-item {
+  display: inline;
+}
+
+.shoppinglist-home .shoppinglist-item li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.shoppinglist-home .shoppinglist-item li p {
+  display: inline;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.shoppinglist-home .shoppinglist-item li p span {
+  display: block;
+  color: #8F8F8F;
+  font-size: 8px;
+}
+
+.shoppinglist-home .check {
+  text-decoration: line-through;
+}
+
+.shoppinglist-home .container {
+  padding: 24px 26px 14px 24px;
+  height: 10%;
+  background: #06061d;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px #000000;
+          box-shadow: 0 3px 6px #000000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shoppinglist-home .todo-box {
+  display: inline;
+  margin-right: 14px;
+  float: left;
+}
+/*# sourceMappingURL=layout.css.map */

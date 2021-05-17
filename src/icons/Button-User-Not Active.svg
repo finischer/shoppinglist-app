@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43.485" height="46.624" viewBox="0 0 43.485 46.624">
+  <defs>
+    <filter id="Pfad_8" x="0" y="15.882" width="43.485" height="30.742" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_9" x="6.242" y="0" width="31" height="31" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Button_-_User_-_Not_Active" data-name="Button - User - Not Active" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Pfad_8)">
+      <path id="Pfad_8-2" data-name="Pfad 8" d="M33.367,150a12.742,12.742,0,0,0-12.742,12.742H46.11A12.742,12.742,0,0,0,33.367,150Z" transform="translate(-11.63 -128.12)" fill="rgba(108,108,110,0.65)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Pfad_9)">
+      <path id="Pfad_9-2" data-name="Pfad 9" d="M6.5,0A6.5,6.5,0,1,1,0,6.5,6.5,6.5,0,0,1,6.5,0Z" transform="translate(15.24 6)" fill="rgba(108,108,110,0.65)"/>
+    </g>
+  </g>
+</svg>

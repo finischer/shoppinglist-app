@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="50" viewBox="0 0 52 50">
+  <defs>
+    <filter id="Pfad_1" x="0" y="0" width="52" height="50" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.871"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Button_-_Home_-_Not_Active" data-name="Button - Home - Not Active" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Pfad_1)">
+      <path id="Pfad_1-2" data-name="Pfad 1" d="M-1.306-4.269v16h8v-8h8v8h8v-16h5l-16.944-16-17.056,16h5" transform="translate(15.31 26.27)" fill="rgba(108,108,110,0.65)"/>
+    </g>
+  </g>
+</svg>

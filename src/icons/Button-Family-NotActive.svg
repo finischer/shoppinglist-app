@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47.982" height="47.183" viewBox="0 0 47.982 47.183">
+  <defs>
+    <filter id="Pfad_10" x="4.538" y="0" width="24.481" height="24.481" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_11" x="0" y="7.89" width="29.932" height="39.292" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_12" x="17.484" y="21.03" width="20.319" height="26.152" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_13" x="9.192" y="7.727" width="29.93" height="39.456" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_14" x="17.484" y="12.366" width="30.498" height="34.817" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_15" x="13.882" y="0.001" width="24.48" height="24.48" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pfad_16" x="21.447" y="6.891" width="22.571" height="22.571" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-7"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Button_-_Family_-_Not_Active" data-name="Button - Family - Not Active" transform="translate(9 6)">
+    <g id="Gruppe_6" data-name="Gruppe 6" transform="translate(-84.818 -2.824)">
+      <g transform="matrix(1, 0, 0, 1, 75.82, -3.18)" filter="url(#Pfad_10)">
+        <path id="Pfad_10-2" data-name="Pfad 10" d="M92.6,9.3a3.24,3.24,0,1,0-3.24-3.24A3.24,3.24,0,0,0,92.6,9.3Z" transform="translate(-75.82 3.18)" fill="rgba(108,108,110,0.65)"/>
+      </g>
+    </g>
+    <g id="Gruppe_7" data-name="Gruppe 7" transform="translate(-0.001 -113.254)">
+      <g transform="matrix(1, 0, 0, 1, -9, 107.25)" filter="url(#Pfad_11)">
+        <path id="Pfad_11-2" data-name="Pfad 11" d="M11.5,135.061a1.957,1.957,0,0,1-1.623-2.378l.018-.076a2.359,2.359,0,0,1-2.3-3.593l4.342-6.921a2.187,2.187,0,0,0-1.807-.95h-4.3a2.246,2.246,0,0,0-2.008,1.268L.155,129.824a1.488,1.488,0,0,0,2.669,1.318l1.2-2.426.386,5.087v7.145a1.488,1.488,0,0,0,2.977,0v-6.737H8.563v6.737a1.488,1.488,0,0,0,2.951.273,2.367,2.367,0,0,1-.016-.273v-5.887Z" transform="translate(9 -107.25)" fill="rgba(108,108,110,0.65)"/>
+      </g>
+    </g>
+    <g id="Gruppe_8" data-name="Gruppe 8" transform="translate(-275.949 -342.829)">
+      <g transform="matrix(1, 0, 0, 1, 266.95, 336.83)" filter="url(#Pfad_12)">
+        <path id="Pfad_12-2" data-name="Pfad 12" d="M295.466,365.965a1.847,1.847,0,0,1-1.4-2.015h-.016a2.175,2.175,0,0,1-.622-.091v6.561a1.591,1.591,0,0,0,2.319,1.415,2.17,2.17,0,0,1-.285-1.077v-4.793Z" transform="translate(-266.95 -336.83)" fill="rgba(108,108,110,0.65)"/>
+      </g>
+    </g>
+    <g id="Gruppe_9" data-name="Gruppe 9" transform="translate(-134.644 -117.145)">
+      <g transform="matrix(1, 0, 0, 1, 125.64, 111.14)" filter="url(#Pfad_13)">
+        <path id="Pfad_13-2" data-name="Pfad 13" d="M151.242,135.47l3.728-5.941a2.076,2.076,0,0,1,.8-.736,3.164,3.164,0,0,1-.763-2.9l-.186-.3a1.513,1.513,0,0,0-1.225-.708c-.148-.02-3.428-.019-3.566,0a1.513,1.513,0,0,0-1.225.708l-4.733,7.544a1.515,1.515,0,1,0,2.566,1.61l.477-.76-.605,2.614a1.105,1.105,0,0,0,1.077,1.355h.6v6.856a1.515,1.515,0,0,0,3.029,0v-6.856h.24A2.082,2.082,0,0,1,151.242,135.47Z" transform="translate(-125.64 -111.14)" fill="rgba(108,108,110,0.65)"/>
+      </g>
+    </g>
+    <g id="Gruppe_13" data-name="Gruppe 13" transform="translate(-268.485 -193.066)">
+      <g transform="matrix(1, 0, 0, 1, 259.48, 187.07)" filter="url(#Pfad_14)">
+        <path id="Pfad_14-2" data-name="Pfad 14" d="M295.285,210.911,291.575,205a1.186,1.186,0,0,0-.96-.555c-.057-.008-.705-.012-1.363-.012-.683,0-1.376,0-1.432.012a1.186,1.186,0,0,0-.96.555l-3.71,5.913a1.187,1.187,0,0,0,2.011,1.262l.374-.6-.474,2.048a.867.867,0,0,0,.844,1.062h.468v5.374a1.187,1.187,0,1,0,2.374,0v-5.374h.94v5.374a1.187,1.187,0,1,0,2.374,0v-5.374h.468a.867.867,0,0,0,.844-1.062l-.474-2.049.374.6a1.187,1.187,0,0,0,2.011-1.262Z" transform="translate(-256.48 -186.07)" fill="rgba(108,108,110,0.65)"/>
+      </g>
+    </g>
+    <g id="Gruppe_11" data-name="Gruppe 11" transform="translate(-218.383 -12.168)">
+      <g transform="matrix(1, 0, 0, 1, 209.38, 6.17)" filter="url(#Pfad_15)">
+        <path id="Pfad_15-2" data-name="Pfad 15" d="M235.505,18.649a3.24,3.24,0,1,0-3.24-3.24A3.24,3.24,0,0,0,235.505,18.649Z" transform="translate(-209.38 -6.17)" fill="rgba(108,108,110,0.65)"/>
+      </g>
+    </g>
+    <g id="Gruppe_12" data-name="Gruppe 12" transform="translate(-331.159 -108.788)">
+      <g transform="matrix(1, 0, 0, 1, 322.16, 102.79)" filter="url(#Pfad_16)">
+        <path id="Pfad_16-2" data-name="Pfad 16" d="M353.646,119.881a2.285,2.285,0,1,0-1.04-1.916A2.275,2.275,0,0,0,353.646,119.881Z" transform="translate(-322.16 -102.79)" fill="rgba(108,108,110,0.65)"/>
+      </g>
+    </g>
+  </g>
+</svg>
