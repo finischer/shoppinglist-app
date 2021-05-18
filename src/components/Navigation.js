@@ -25,7 +25,7 @@ export default class Navigation extends Component {
     }
 
     handleClick(name){
-        if (name == "home") {
+        if (name === "home") {
             this.setState({
                 isPressed:{
                     home: true,
@@ -35,7 +35,7 @@ export default class Navigation extends Component {
                     user: false
                 }
             });
-        }else if(name == "list"){
+        }else if(name === "list"){
             this.setState({
                 isPressed:{
                     home: false,
@@ -45,7 +45,7 @@ export default class Navigation extends Component {
                     user: false
                 }
             });
-        }else if(name == "family"){
+        }else if(name === "family"){
             this.setState({
                 isPressed:{
                     home: false,
@@ -55,7 +55,7 @@ export default class Navigation extends Component {
                     user: false
                 }
             });
-        }else if(name == "settings"){
+        }else if(name === "settings"){
             this.setState({
                 isPressed:{
                     home: false,
@@ -65,7 +65,7 @@ export default class Navigation extends Component {
                     user: false
                 }
             });
-        }else if(name == "user"){
+        }else if(name === "user"){
             this.setState({
                 isPressed:{
                     home: false,
