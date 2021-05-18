@@ -30,9 +30,13 @@ export default class ShoppinglistItem extends Component {
                         <ToDoBoxBlanco onClick={this.handleClick} />
                     </div> 
                     
-                    <p>{this.state.product} <span> Hinzugefügt am {this.state.date} </span></p> </li>
-                
-                <hr />
+                    <div className="listitem-shoppinglist">
+                        <p>{this.state.product} <span> Hinzugefügt am {this.state.date} </span></p>  
+                    
+                        <hr />
+                    </div>
+                </li>
+                    
             </div>
             )
         }else{
@@ -43,9 +47,16 @@ export default class ShoppinglistItem extends Component {
                         <ToDoBoxDone onClick={this.handleClick} />
                     </div> 
                     
-                    <p>{this.state.product} <span> Hinzugefügt am {this.state.date} </span></p> </li>
+                    <div className="listitem-shoppinglist">
+                        <p>{this.state.product} <span> Hinzugefügt am {this.state.date} </span></p> 
+                        <hr />
+                    </div>
+                   
+
+
+                </li>
                 
-                <hr />
+                
             </div>
             )
         }

@@ -6,9 +6,29 @@ html, body {
   padding: 0px 23px 0 23px;
 }
 
+h1, h2, h3, h4, hr {
+  text-shadow: 0 3px 6px #000000;
+}
+
 hr {
   border-radius: 7px;
   background-color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  padding: 24px 26px 14px 24px;
+  height: auto;
+  background: #06061d;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px #000000;
+          box-shadow: 0 3px 6px #000000;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .headline-trennlinie {
@@ -43,7 +63,10 @@ hr {
 
 .shoppinglist-home .shoppinglist-item li {
   margin-bottom: 10px;
-  list-style-type: none;
+}
+
+.shoppinglist-home .shoppinglist-item li .listitem-shoppinglist {
+  margin-left: 38px;
 }
 
 .shoppinglist-home .shoppinglist-item li p {
@@ -62,20 +85,76 @@ hr {
   text-decoration: line-through;
 }
 
-.shoppinglist-home .container {
-  padding: 24px 26px 14px 24px;
-  height: 10%;
-  background: #06061d;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 3px 6px #000000;
-          box-shadow: 0 3px 6px #000000;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .shoppinglist-home .todo-box {
   display: inline;
   margin-right: 14px;
   float: left;
+}
+
+.meinefamilie-home hr {
+  border: 0.3px solid #8F8F8F;
+}
+
+.meinefamilie-home .meinefamilie-item {
+  display: inline;
+  margin-bottom: 10px;
+}
+
+.meinefamilie-home .meinefamilie-item li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.meinefamilie-home .meinefamilie-item li .listitem-familie {
+  margin-left: 42px;
+}
+
+.meinefamilie-home .meinefamilie-item li p {
+  display: inline;
+  vertical-align: middle;
+}
+
+.meinefamilie-home .meinefamilie-item li p span {
+  display: block;
+  color: #8F8F8F;
+  font-size: 8px;
+}
+
+.meinefamilie-home .user-icon {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  float: left;
+}
+
+.meinefamilie-home svg {
+  height: 38px;
+  width: auto;
+}
+
+.navigation {
+  width: 100%;
+  height: 86px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  background-color: #08082a;
+  padding-left: 41px;
+  padding-right: 41.5px;
+}
+
+.navigation ul {
+  margin: 26px 0 28px 0;
+  vertical-align: middle;
+  width: 100%;
+  position: absolute;
+  left: -30px;
+}
+
+.navigation li {
+  display: inline-block;
+  margin-right: 44px;
+  width: 34px;
 }
 /*# sourceMappingURL=layout.css.map */
