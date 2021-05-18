@@ -6,19 +6,17 @@ import {ReactComponent as UserButtonNoActive} from '../../icons/Button-User-NotA
 export default class UserButton extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            isPressed: this.props.pressed
-        }
+       
     }
     
     render() {
-        if (this.state.isPressed) {
+        if (this.props.pressed) {
             return (
-                <li> <UserButtonActive /> </li>   
+                <li onClick={this.props.handleClick}> <UserButtonActive /> </li>   
             ) 
         }else{
             return (
-                <li> <UserButtonNoActive /> </li>   
+                <li onClick={this.props.handleClick}> <UserButtonNoActive /> </li>   
             )  
         }
         

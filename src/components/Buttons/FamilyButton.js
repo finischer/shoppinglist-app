@@ -6,19 +6,17 @@ import {ReactComponent as FamilyButtonNoActive} from '../../icons/Button-Family-
 export default class FamilyButton extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            isPressed: this.props.pressed
-        }
+        
     }
     
     render() {
-        if (this.state.isPressed) {
+        if (this.props.pressed) {
             return (
-                <li> <FamilyButtonActive /> </li>   
+                <li onClick={this.props.handleClick}> <FamilyButtonActive /> </li>   
             ) 
         }else{
             return (
-                <li> <FamilyButtonNoActive /> </li>   
+                <li onClick={this.props.handleClick}> <FamilyButtonNoActive /> </li>   
             )  
         }
         

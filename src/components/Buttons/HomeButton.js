@@ -7,19 +7,16 @@ import {ReactComponent as HomeButtonNoActive} from '../../icons/Button-Home-NotA
 export default class HomeButton extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            isPressed: this.props.pressed
-        }
     }
     
     render() {
-        if (this.state.isPressed) {
+        if (this.props.pressed) {
             return (
-                <li> <HomeButtonActive /> </li>   
+                <li onClick={this.props.handleClick}> <HomeButtonActive  /> </li>   
             ) 
         }else{
             return (
-                <li> <HomeButtonNoActive /> </li>   
+                <li onClick={this.props.handleClick}> <HomeButtonNoActive /> </li>   
             )  
         }
         

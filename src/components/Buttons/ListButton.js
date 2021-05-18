@@ -6,19 +6,17 @@ import {ReactComponent as ListButtonNoActive} from '../../icons/Button-List-NotA
 export default class ListButton extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            isPressed: this.props.pressed
-        }
+        
     }
     
     render() {
-        if (this.state.isPressed) {
+        if (this.props.pressed) {
             return (
-                <li> <ListButtonActive /> </li>   
+                <li onClick={this.props.handleClick}> <ListButtonActive /> </li>   
             ) 
         }else{
             return (
-                <li> <ListButtonNoActive /> </li>   
+                <li onClick={this.props.handleClick}> <ListButtonNoActive /> </li>   
             )  
         }
         
