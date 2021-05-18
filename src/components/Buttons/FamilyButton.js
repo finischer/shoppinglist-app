@@ -4,11 +4,6 @@ import {ReactComponent as FamilyButtonActive} from '../../icons/Button-Family-Ac
 import {ReactComponent as FamilyButtonNoActive} from '../../icons/Button-Family-NotActive.svg'
 
 export default class FamilyButton extends Component {
-    constructor(props){
-        super(props);
-        
-    }
-    
     render() {
         if (this.props.pressed) {
             return (

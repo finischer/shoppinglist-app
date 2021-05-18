@@ -4,10 +4,6 @@ import {ReactComponent as ListButtonActive} from '../../icons/Button-List-Active
 import {ReactComponent as ListButtonNoActive} from '../../icons/Button-List-NotActive.svg'
 
 export default class ListButton extends Component {
-    constructor(props){
-        super(props);
-        
-    }
     
     render() {
         if (this.props.pressed) {

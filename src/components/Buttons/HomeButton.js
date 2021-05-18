@@ -5,9 +5,6 @@ import {ReactComponent as HomeButtonNoActive} from '../../icons/Button-Home-NotA
 
 
 export default class HomeButton extends Component {
-    constructor(props){
-        super(props);
-    }
     
     render() {
         if (this.props.pressed) {

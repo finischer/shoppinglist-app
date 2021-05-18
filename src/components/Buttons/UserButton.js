@@ -4,11 +4,6 @@ import {ReactComponent as UserButtonActive} from '../../icons/Button-User-Active
 import {ReactComponent as UserButtonNoActive} from '../../icons/Button-User-NotActive.svg'
 
 export default class UserButton extends Component {
-    constructor(props){
-        super(props);
-       
-    }
-    
     render() {
         if (this.props.pressed) {
             return (

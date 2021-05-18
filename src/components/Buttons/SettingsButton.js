@@ -4,10 +4,6 @@ import {ReactComponent as SettingsButtonActive} from '../../icons/Button-Setting
 import {ReactComponent as SettingsButtonNoActive} from '../../icons/Button-Settings-NotActive.svg'
 
 export default class SettingsButton extends Component {
-    constructor(props){
-        super(props);
-       
-    }
     
     render() {
         if (this.props.pressed) {
