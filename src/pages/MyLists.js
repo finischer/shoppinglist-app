@@ -10,6 +10,7 @@ export default class MyLists extends Component {
                 <Headline title="Einkaufslisten" />
                 <Subheadline title="Meine Listen" />
                 <Lists />
+                
             </div>
         )
     }

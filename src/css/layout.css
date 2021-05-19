@@ -179,11 +179,13 @@ li {
 
 .lists-mylists .mylists-item li .item-mylists {
   margin-left: 35px;
+  cursor: pointer;
 }
 
 .lists-mylists .mylists-item li p {
   display: inline;
   vertical-align: middle;
+  text-decoration: none;
 }
 
 .lists-mylists .mylists-item li p span {
@@ -195,6 +197,11 @@ li {
 .lists-mylists .mylists-item li p span svg {
   height: 10px;
   width: auto;
+}
+
+.lists-mylists .mylists-item li a {
+  color: white;
+  text-decoration: none;
 }
 
 .lists-mylists .shoppinglist-icon {

@@ -201,11 +201,13 @@ li{
 
             .item-mylists{
                 margin-left: 35px;
+                cursor: pointer;
             }
 
             p{
                 display: inline;
                 vertical-align: middle;
+                text-decoration: none;
 
                 span{
                     display:block;
@@ -217,7 +219,15 @@ li{
                         width: auto;
                     }
                 }
-            }   
+            } 
+
+            a{
+                color:white;
+                text-decoration: none;
+            }
+
+
+        
        }   
     }
 
