@@ -12,6 +12,7 @@ html, body{
     background: $primary;
     color: white;
     font-family: 'Balsamiq Sans', cursive;
+    font-size: 12px;
     padding: 0px 23px 0 23px;
   
 }
@@ -179,6 +180,41 @@ li{
 
     svg{
         cursor: pointer;
+    }
+}
+
+//MyLists
+
+//Meine Listen
+.lists-mylists{
+    hr{
+        border: 0.3px solid $grey;
+    }
+    
+    .mylists-item{
+        display: inline;
+        margin-bottom: 10px;
+
+        li{
+            margin-bottom: 10px;
+            list-style-type: none;
+
+            .item-mylists{
+                margin-left: 42px;
+            }
+
+            p{
+                display: inline;
+                
+                vertical-align: middle;
+
+                span{
+                    display:block;
+                    float: right;
+                    color: $grey;
+                }
+            }   
+       }   
     }
 }
 

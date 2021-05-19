@@ -3,6 +3,7 @@ html, body {
   background: #0b0b38;
   color: white;
   font-family: 'Balsamiq Sans', cursive;
+  font-size: 12px;
   padding: 0px 23px 0 23px;
 }
 
@@ -160,5 +161,34 @@ li {
 
 .navigation svg {
   cursor: pointer;
+}
+
+.lists-mylists hr {
+  border: 0.3px solid #8F8F8F;
+}
+
+.lists-mylists .mylists-item {
+  display: inline;
+  margin-bottom: 10px;
+}
+
+.lists-mylists .mylists-item li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.lists-mylists .mylists-item li .item-mylists {
+  margin-left: 42px;
+}
+
+.lists-mylists .mylists-item li p {
+  display: inline;
+  vertical-align: middle;
+}
+
+.lists-mylists .mylists-item li p span {
+  display: block;
+  float: right;
+  color: #8F8F8F;
 }
 /*# sourceMappingURL=layout.css.map */
