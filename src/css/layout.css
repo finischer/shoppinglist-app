@@ -191,4 +191,9 @@ li {
   float: right;
   color: #8F8F8F;
 }
+
+.lists-mylists .mylists-item li p span svg {
+  height: 10px;
+  width: auto;
+}
 /*# sourceMappingURL=layout.css.map */
