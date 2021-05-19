@@ -157,4 +157,8 @@ li {
   margin-right: 44px;
   width: 34px;
 }
+
+.navigation svg {
+  cursor: pointer;
+}
 /*# sourceMappingURL=layout.css.map */

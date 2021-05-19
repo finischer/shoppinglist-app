@@ -14,7 +14,6 @@ export default class Home extends Component {
                 <Shoppinglist />
                 <Subheadline title="Meine Familie" />
                 <MeineFamilie />
-                <Navigation />
             </div>
         )
     }
