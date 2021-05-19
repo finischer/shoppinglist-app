@@ -178,7 +178,7 @@ li {
 }
 
 .lists-mylists .mylists-item li .item-mylists {
-  margin-left: 42px;
+  margin-left: 35px;
 }
 
 .lists-mylists .mylists-item li p {
@@ -195,5 +195,15 @@ li {
 .lists-mylists .mylists-item li p span svg {
   height: 10px;
   width: auto;
+}
+
+.lists-mylists .shoppinglist-icon {
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+  margin: 0;
+  margin-bottom: -10px;
+  padding: 0;
+  display: inline;
+  float: left;
 }
 /*# sourceMappingURL=layout.css.map */

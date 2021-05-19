@@ -8,11 +8,11 @@ export default class ListButton extends Component {
     render() {
         if (this.props.pressed) {
             return (
-                <li onClick={this.props.handleClick}> <Link to="/mylist"> <ListButtonActive /> </Link> </li>  
+                <li onClick={this.props.handleClick}> <Link to="/shoppinglists"> <ListButtonActive /> </Link> </li>  
             ) 
         }else{
             return (
-                <li onClick={this.props.handleClick}> <Link to="/mylist"> <ListButtonNoActive /> </Link>  </li>  
+                <li onClick={this.props.handleClick}> <Link to="/shoppinglists"> <ListButtonNoActive /> </Link>  </li>  
             )  
         }
         

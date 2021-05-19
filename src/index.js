@@ -18,7 +18,7 @@ ReactDOM.render(
       <Route path="/" component={Navigation} />
       <Route path="/" exact component={Home} />
       <Route path="/home" exact component={Home} />
-      <Route path="/mylist" exact component={MyLists} />
+      <Route path="/shoppinglists" exact component={MyLists} />
     </Router>
    
   </React.StrictMode>,

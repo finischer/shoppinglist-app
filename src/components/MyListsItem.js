@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 
 import {ReactComponent as Arrow} from '../icons/Arrow.svg'
+import {ReactComponent as ShoppingCart} from '../icons/Shopping-Cart.svg'
+
 export default class MyListsItem extends Component {
     render() {
         return (
             <div className="mylists-item">
                 <li> 
-                    <div className="user-icon">
+                    <div className="shoppinglist-icon">
+                        <ShoppingCart />
                     </div>
 
                     <div className="item-mylists">

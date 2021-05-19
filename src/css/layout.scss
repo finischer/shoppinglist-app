@@ -200,12 +200,11 @@ li{
             list-style-type: none;
 
             .item-mylists{
-                margin-left: 42px;
+                margin-left: 35px;
             }
 
             p{
                 display: inline;
-                
                 vertical-align: middle;
 
                 span{
@@ -220,6 +219,15 @@ li{
                 }
             }   
        }   
+    }
+
+    .shoppinglist-icon{
+        transform: scale(0.75);
+        margin:0;
+        margin-bottom: -10px;
+        padding: 0;
+        display: inline;
+        float:left;
     }
 }
 
