@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {ReactComponent as ButtonAdd} from '../../icons/Button-Add.svg'
 import AddShoppinglist from '../Forms/AddShoppinglist';
-import Lists from '../Lists';
 
 
 export default class AddButton extends Component {

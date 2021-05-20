@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import StandardButton from '../Buttons/StandardButton'
 import Headline from '../Headline'
-import Subheadline from '../Subheadline'
 
 
 
