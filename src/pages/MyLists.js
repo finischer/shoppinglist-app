@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
+import AddButton from '../components/Buttons/AddButton'
 import Headline from '../components/Headline'
 import Lists from '../components/Lists'
 import Subheadline from '../components/Subheadline'
-import {ReactComponent as ButtonAdd} from '../icons/Button-Add.svg'
 
 export default class MyLists extends Component {
     render() {
@@ -12,7 +12,7 @@ export default class MyLists extends Component {
                 
                 <div className="subheadline-mylists">
                     <Subheadline title="Meine Listen" />
-                    <ButtonAdd />
+                    <AddButton />
                 </div>
                 
                 <Lists />

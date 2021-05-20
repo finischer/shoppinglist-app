@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 html, body {
-  background: #0b0b38;
+  background: #2C7873;
   color: white;
   font-family: 'Balsamiq Sans', cursive;
-  font-size: 12px;
+  font-size: 14px;
   padding: 0px 23px 0 23px;
 }
 
@@ -18,6 +18,22 @@ h1, h2, h3, h4, hr {
 hr {
   border-radius: 7px;
   background-color: white;
+  -webkit-box-shadow: 0 3px 6px #000000;
+          box-shadow: 0 3px 6px #000000;
+}
+
+.btn {
+  background: white;
+  border: none;
+  border-radius: 10px;
+  height: 33px;
+  width: 176px;
+  color: #021C1E;
+  -webkit-box-shadow: 0 3px 6px #000000;
+          box-shadow: 0 3px 6px #000000;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 li {
@@ -27,7 +43,7 @@ li {
 .container {
   padding: 24px 26px 14px 24px;
   height: auto;
-  background: #06061d;
+  background: #021C1E;
   border-radius: 5px;
   -webkit-box-shadow: 0 3px 6px #000000;
           box-shadow: 0 3px 6px #000000;
@@ -56,6 +72,10 @@ li {
 
 .active {
   content: url(../icons/ToDo-Box-Done.svg);
+}
+
+.button-add svg {
+  cursor: pointer;
 }
 
 .shoppinglist-home hr {
@@ -144,7 +164,7 @@ li {
   bottom: 0;
   left: 0;
   margin: 0;
-  background-color: #08082a;
+  background-color: #004445;
   padding-left: 41px;
   padding-right: 41.5px;
 }
@@ -165,6 +185,10 @@ li {
 
 .navigation svg {
   cursor: pointer;
+}
+
+.lists-mylists {
+  margin-top: 15px;
 }
 
 .lists-mylists hr {
@@ -245,4 +269,63 @@ li {
   right: 0;
   margin-right: 45px;
 }
+
+.modal {
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #021C1E;
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal-content h1 {
+  text-align: center;
+}
+
+.modal-content form input {
+  margin-top: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding-left: 5px;
+  width: 100%;
+  height: 33px;
+  margin-right: 24px;
+  -webkit-box-shadow: 0 3px 6px #000000;
+          box-shadow: 0 3px 6px #000000;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.modal-content .btn {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+/* Modal Content/Box */
 /*# sourceMappingURL=layout.css.map */
