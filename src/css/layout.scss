@@ -17,6 +17,10 @@ html, body{
   
 }
 
+body{
+    margin-bottom: 110px;
+}
+
 h1, h2, h3, h4, hr{
     text-shadow: 0 3px 6px #000000;
 }
@@ -228,7 +232,10 @@ li{
 
 
         
-       }   
+       }  
+       
+       
+        
     }
 
     .shoppinglist-icon{
@@ -242,7 +249,44 @@ li{
 }
 
 
+.subheadline-mylists{
+    
+    .subheadline-trennlinie{ 
+        position: absolute;    
+        float: left;
+        width: 157px; 
+        margin-right: 25%;
+    }
 
+    svg{
+        position: relative;
+        margin-left: 88%;
+    }
+}
+
+
+//Specially Shoppinglist
+
+.shoppinglistpage{
+
+    .subheadline-shoppinglistpage{
+        .subheadline-trennlinie{
+            width: 157px;
+            float: left;
+        }
+
+        display: inline-block;
+        
+        .buttons-shoppinglistpage{
+            display: inline;
+            position: absolute;
+            right: 0;
+            margin-right: 45px;
+        }
+       
+    }
+
+}
 
 
 

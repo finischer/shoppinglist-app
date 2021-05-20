@@ -7,6 +7,10 @@ html, body {
   padding: 0px 23px 0 23px;
 }
 
+body {
+  margin-bottom: 110px;
+}
+
 h1, h2, h3, h4, hr {
   text-shadow: 0 3px 6px #000000;
 }
@@ -212,5 +216,33 @@ li {
   padding: 0;
   display: inline;
   float: left;
+}
+
+.subheadline-mylists .subheadline-trennlinie {
+  position: absolute;
+  float: left;
+  width: 157px;
+  margin-right: 25%;
+}
+
+.subheadline-mylists svg {
+  position: relative;
+  margin-left: 88%;
+}
+
+.shoppinglistpage .subheadline-shoppinglistpage {
+  display: inline-block;
+}
+
+.shoppinglistpage .subheadline-shoppinglistpage .subheadline-trennlinie {
+  width: 157px;
+  float: left;
+}
+
+.shoppinglistpage .subheadline-shoppinglistpage .buttons-shoppinglistpage {
+  display: inline;
+  position: absolute;
+  right: 0;
+  margin-right: 45px;
 }
 /*# sourceMappingURL=layout.css.map */

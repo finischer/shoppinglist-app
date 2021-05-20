@@ -3,6 +3,7 @@ import Headline from '../components/Headline'
 import MeineFamilie from '../components/MeineFamilie'
 import Shoppinglist from '../components/Shoppinglist'
 import Subheadline from '../components/Subheadline'
+import ShoppinglistPage from './ShoppinglistPage'
 
 export default class Home extends Component {
     render() {

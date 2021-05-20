@@ -9,6 +9,7 @@ import './css/layout.css';
 //Pages
 import Home from './pages/Home';
 import MyLists from './pages/MyLists';
+import ShoppinglistPage from './pages/ShoppinglistPage';
 
 
 
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Route path="/" exact component={Home} />
       <Route path="/home" exact component={Home} />
       <Route path="/shoppinglists" exact component={MyLists} />
+      <Route path="/shoppinglists/list" component={ShoppinglistPage} />
     </Router>
    
   </React.StrictMode>,
