@@ -8,11 +8,11 @@ export default class UserButton extends Component {
     render() {
         if (this.props.pressed) {
             return (
-                <li onClick={this.props.handleClick}> <Link to="myuser"> <UserButtonActive /> </Link> </li>   
+                <li onClick={this.props.handleClick}> <Link to="/myuser"> <UserButtonActive /> </Link> </li>   
             ) 
         }else{
             return (
-                <li onClick={this.props.handleClick}> <Link to="myuser"> <UserButtonNoActive /> </Link> </li>   
+                <li onClick={this.props.handleClick}> <Link to="/myuser"> <UserButtonNoActive /> </Link> </li>   
             )  
         }
         

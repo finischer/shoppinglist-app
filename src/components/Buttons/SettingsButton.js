@@ -9,11 +9,11 @@ export default class SettingsButton extends Component {
     render() {
         if (this.props.pressed) {
             return (
-                <li onClick={this.props.handleClick}> <Link to="settings"> <SettingsButtonActive /> </Link> </li>   
+                <li onClick={this.props.handleClick}> <Link to="/settings"> <SettingsButtonActive /> </Link> </li>   
             ) 
         }else{
             return (
-                <li onClick={this.props.handleClick}> <Link to="settings"><SettingsButtonNoActive /> </Link> </li>   
+                <li onClick={this.props.handleClick}> <Link to="/settings"><SettingsButtonNoActive /> </Link> </li>   
             )  
         }
         
