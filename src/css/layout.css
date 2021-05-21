@@ -40,9 +40,26 @@ hr {
   opacity: 70%;
 }
 
+.btn:active {
+  opacity: 50%;
+}
+
 .btn-delete {
   background-color: #C42222;
   color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:active {
+  color: grey;
+}
+
+a:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 li {
@@ -386,5 +403,59 @@ li {
 
 .shoppinglistpage .table-shoppinglist-info tr {
   height: 5px;
+}
+
+.login, .signup {
+  width: 70%;
+  height: 32%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.login form, .signup form {
+  width: 100%;
+}
+
+.login input[type=text], .login input[type=password], .signup input[type=text], .signup input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 13px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 3px 6px #000000;
+          box-shadow: 0 3px 6px #000000;
+  color: #021C1E;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 16px;
+}
+
+.login .btn-login, .login .btn-signup, .login #signup-link, .signup .btn-login, .signup .btn-signup, .signup #signup-link {
+  position: relative;
+  margin-top: 15px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.login #signup-link, .signup #signup-link {
+  position: absolute;
+  text-decoration: underline;
+}
+
+.signup {
+  height: 45%;
+}
+
+.signup p {
+  text-align: center;
 }
 /*# sourceMappingURL=layout.css.map */

@@ -53,9 +53,27 @@ hr{
     opacity: 70%;
 }
 
+.btn:active{
+    opacity: 50%;
+}
+
 .btn-delete{
     background-color: $button-delete;
     color:white;
+}
+
+
+a:visited{
+    color: white;
+}
+
+a:active{
+    color: grey;
+}
+
+a:hover{
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 li{
@@ -430,6 +448,60 @@ li{
         }
     }
 
+}
+
+
+//LOGIN
+.login, .signup{
+    width: 70%;
+    height: 32%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    form{
+        width: 100%; 
+    }
+
+
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 13px 0;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        box-shadow: 0 3px 6px #000000;
+
+        color:$container-background;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        font-family: 'Balsamiq Sans', cursive;
+        font-size: 16px;
+    }
+
+    .btn-login, .btn-signup, #signup-link{
+        position:relative;
+        margin-top: 15px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    #signup-link{
+        position: absolute;
+        text-decoration: underline;
+    }
+}
+
+.signup{
+    height: 45%;
+
+    p{
+        text-align: center;
+    }
 }
 
 

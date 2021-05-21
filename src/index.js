@@ -10,6 +10,8 @@ import './css/layout.css';
 import Home from './pages/Home';
 import MyLists from './pages/MyLists';
 import ShoppinglistPage from './pages/ShoppinglistPage';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 
 
@@ -21,6 +23,8 @@ ReactDOM.render(
       <Route path="/home" exact component={Home} />
       <Route path="/shoppinglists" exact component={MyLists} />
       <Route path="/shoppinglists/list" component={ShoppinglistPage} />
+      <Route path="/login" component={Login} />
+      <Route path="/signup" component={Signup} />
     </Router>
    
   </React.StrictMode>,
