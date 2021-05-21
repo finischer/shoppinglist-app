@@ -104,6 +104,22 @@ li {
   font-size: 14px;
 }
 
+.shoppinglist-home .shoppinglist-item li ::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+.shoppinglist-home .shoppinglist-item li :-ms-input-placeholder {
+  font-style: italic;
+}
+
+.shoppinglist-home .shoppinglist-item li ::-ms-input-placeholder {
+  font-style: italic;
+}
+
+.shoppinglist-home .shoppinglist-item li ::placeholder {
+  font-style: italic;
+}
+
 .shoppinglist-home .shoppinglist-item li p {
   display: inline;
   margin: 0;
@@ -114,6 +130,13 @@ li {
   display: block;
   color: #8F8F8F;
   font-size: 8px;
+}
+
+.shoppinglist-home .shoppinglist-item li .no-product {
+  color: #8F8F8F;
+  font-style: italic;
+  font-family: 'Balsamiq Sans', cursive;
+  font-weight: bold;
 }
 
 .shoppinglist-home .check {

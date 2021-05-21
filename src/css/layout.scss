@@ -116,12 +116,17 @@ li{
                 font-weight: bold;
                 font-family: 'Balsamiq Sans', cursive;
                 font-size: 14px;
+
+                
             }
+
+            ::placeholder{
+                font-style: italic;
+            }
+           
 
 
             p{
-
-
                 display: inline;
                 margin: 0;
                 vertical-align: middle;
@@ -132,6 +137,14 @@ li{
                     font-size: 8px;
                 }
             }   
+
+            .no-product{
+               color: $grey;
+               font-style: italic;
+               font-family: 'Balsamiq Sans', cursive;
+               font-weight: bold;
+
+            }
 
         }
     }

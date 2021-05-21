@@ -89,9 +89,15 @@ export default class ShoppinglistItem extends Component {
     }
         
     render() {
-        let listItem = this.state.inputField ?  <input id="input-shoppinglist" type="text" autoFocus  placeholder="Produkt hinzufügen" value={this.state.product} onChange={this.handleChange} contentEditable="true" onKeyDown={this._pressEnter}  /> : <p onClick={this.handleItemClick}>{this.state.product} <span> Hinzugefügt am {this.state.date} </span></p>;
+        
+        let isProduct = this.state.product === "Produkt hinzufügen" ? true : false;
+        console.log(" TEST: " + isProduct)
+    
+        let listItem = this.state.inputField ?  <input id="input-shoppinglist" type="text" autoFocus  placeholder="Produkt hinzufügen" value={`${isProduct ? "" : this.state.product}`} onChange={this.handleChange} contentEditable="true" onKeyDown={this._pressEnter}  /> : <p className={`${isProduct ? "no-product" : ""}`} onClick={this.handleItemClick} > {this.state.product} <span> Hinzugefügt am {this.state.date} </span></p>;
         let toDoBox = this.state.active ? <ToDoBoxDone onClick={this.handleClick} /> : <ToDoBoxBlanco onClick={this.handleClick} /> ;
-            return (
+            
+        
+        return (
                 <div className={`shoppinglist-item ${this.state.active ? "check" : ""}`}> 
                 <li> 
                     <div className={"todo-box"}>
