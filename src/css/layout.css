@@ -438,7 +438,7 @@ li {
   font-size: 16px;
 }
 
-.login .btn-login, .login .btn-signup, .login #signup-link, .signup .btn-login, .signup .btn-signup, .signup #signup-link {
+.login .btn-login, .login #signup-link, .signup .btn-login, .signup #signup-link {
   position: relative;
   margin-top: 15px;
   left: 50%;
@@ -453,6 +453,14 @@ li {
 
 .signup {
   height: 360px;
+}
+
+.signup .btn-signup {
+  position: relative;
+  margin-top: 15px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
 }
 
 .signup p {

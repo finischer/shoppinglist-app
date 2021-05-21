@@ -483,7 +483,7 @@ li{
         font-size: 16px;
     }
 
-    .btn-login, .btn-signup, #signup-link{
+    .btn-login, #signup-link{
         position:relative;
         margin-top: 15px;
         left: 50%;
@@ -499,6 +499,13 @@ li{
 .signup{
     height: 360px;
 
+    .btn-signup{
+        position:relative;
+        margin-top: 15px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
     p{
         text-align: center;
     }
