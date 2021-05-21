@@ -407,7 +407,7 @@ li {
 
 .login, .signup {
   width: 70%;
-  height: 32%;
+  height: 270px;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -452,7 +452,7 @@ li {
 }
 
 .signup {
-  height: 45%;
+  height: 360px;
 }
 
 .signup p {
