@@ -452,7 +452,7 @@ li{
 
 
 //LOGIN
-.login, .signup{
+.login{
     width: 70%;
     height: 270px;
     position: absolute;
@@ -498,6 +498,29 @@ li{
 
 .signup{
     height: 360px;
+    width: 70%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 13px 0;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        box-shadow: 0 3px 6px #000000;
+
+        color:$container-background;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        font-family: 'Balsamiq Sans', cursive;
+        font-size: 16px;
+    }
 
     .btn-signup{
         position:relative;
@@ -505,7 +528,7 @@ li{
         left: 50%;
         transform: translate(-50%);
     }
-    
+
     p{
         text-align: center;
     }
