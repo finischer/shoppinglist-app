@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {ReactComponent as ButtonAdd} from '../../icons/Button-Add.svg'
-import AddShoppinglist from '../Forms/AddShoppinglist';
 
 
 export default class AddButton extends Component {
@@ -12,25 +11,28 @@ export default class AddButton extends Component {
         }
     }
 
+    handleClick(){
+        var modal = document.getElementsByClassName("modal")
+
+        for(var i =0; i<modal.length; i++){
+            modal[i].style.display = 'block';
+        }
+            
+        console.log("KLICK AUF ADD BUTTON")
+    }
     
     
     render() {
 
-        if(this.state.pressed){
+        
             return( 
-                <div className="button-add">
-                    <ButtonAdd onClick={() => this.setState({pressed: true})}  />
-                    <AddShoppinglist status={this.state.pressed} />
+                <div>
+                    <div className="button-add">
+                        <ButtonAdd onClick={this.handleClick}  />
+                    </div>
+                    
                 </div>
             )
-        }
-        
-        return (
-            <div className="button-add">
-                <ButtonAdd onClick={() => this.setState({pressed: true})}  />
-            </div>
-        )
-
-        
-    }
+        }    
+    
 }

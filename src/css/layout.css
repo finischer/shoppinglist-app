@@ -70,11 +70,69 @@ li {
   margin-top: -10px;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #021C1E;
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal-content h1 {
+  text-align: center;
+}
+
+.modal-content form input {
+  margin-top: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding-left: 5px;
+  width: 100%;
+  height: 33px;
+  margin-right: 24px;
+  -webkit-box-shadow: 0 3px 6px #000000;
+          box-shadow: 0 3px 6px #000000;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.modal-content .btn {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
 .active {
   content: url(../icons/ToDo-Box-Done.svg);
 }
 
-.button-add svg {
+.button-add svg, .button-close svg {
   cursor: pointer;
 }
 
@@ -301,63 +359,6 @@ li {
   position: absolute;
   right: 0;
   margin-right: 45px;
-}
-
-.modal {
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-}
-
-.modal-content {
-  background-color: #021C1E;
-  width: 80%;
-  height: 60%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.modal-content h1 {
-  text-align: center;
-}
-
-.modal-content form input {
-  margin-top: 15px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  padding-left: 5px;
-  width: 100%;
-  height: 33px;
-  margin-right: 24px;
-  -webkit-box-shadow: 0 3px 6px #000000;
-          box-shadow: 0 3px 6px #000000;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.modal-content .btn {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
 }
 
 /* Modal Content/Box */
