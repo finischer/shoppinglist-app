@@ -1,13 +1,16 @@
-//Fonts
+//FONTS
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-//Colors
+//COLORS
 $primary:#2C7873;
 $nav-background: #004445;
 $container-background: #021C1E;
 $grey: #8F8F8F;
 
 
+//DESIGN - START
+
+//GENERAL
 html, body{
     background: $primary;
     color: white;
@@ -31,9 +34,6 @@ hr{
     box-shadow: 0 3px 6px #000000;
 
 }
-
-
-
 
 .btn{
     background: white;
@@ -79,7 +79,7 @@ li{
     margin-bottom: 15px;
 }
 
-//POPUP
+//POPUP - MODAL WINDOW
 
 .modal {
     display: none;
@@ -95,8 +95,6 @@ li{
 
 }
 
-
-
 .modal-content {
     background-color: $container-background;
     width: 80%;
@@ -111,9 +109,6 @@ li{
     }
 
     form{
-        
-       
-
         input{
             margin-top: 15px;
             border-radius: 10px;
@@ -127,8 +122,6 @@ li{
             font-size: 15px;
             font-weight: bold;
         }
-
-        
     }
 
     .btn{
@@ -139,7 +132,8 @@ li{
     }
 }
 
-//Home
+//PAGES
+//HOME
 .active {
     content: url(../icons/ToDo-Box-Done.svg);
 }
@@ -268,7 +262,7 @@ li{
 }
 
 
-//Navigation TODO
+//Navigation
 .navigation{
     width: 100%;
     height: 86px;
@@ -299,9 +293,9 @@ li{
     }
 }
 
-//MyLists
+//PAGE - MYLISTS
 
-//Meine Listen
+//MEINE LISTEN
 .lists-mylists{
     hr{
         border: 0.3px solid $grey;
@@ -378,8 +372,7 @@ li{
 }
 
 
-//Specially Shoppinglist
-
+//SHOPPINGLIST WITH PRODUCTS
 .shoppinglistpage{
 
     .subheadline-shoppinglistpage{
@@ -400,16 +393,6 @@ li{
     }
 
 }
-
-
-
-
-  
-  /* Modal Content/Box */
-  
-
-//Add Shoppinglist - Form
-
 
 
 

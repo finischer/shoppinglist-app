@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
+import AddButton from '../components/Buttons/AddButton'
+import InfoButton from '../components/Buttons/InfoButton'
 import Headline from '../components/Headline'
-import Shoppinglist from '../components/Shoppinglist'
+import Shoppinglist from '../components/Shoppinglist/Shoppinglist'
+import ShoppinglistInfo from '../components/Shoppinglist/ShoppinglistInfo'
 import Subheadline from '../components/Subheadline'
 
-import {ReactComponent as ButtonAdd} from '../icons/Button-Add.svg'
-import {ReactComponent as ButtonInfo} from '../icons/Button-Info.svg'
 
 
 export default class ShoppinglistPage extends Component {
     render() {
         return (
             <div className="shoppinglistpage">
+                <ShoppinglistInfo />
                 <Headline title="Einkaufslisten" />
 
                 <div className="subheadline-shoppinglistpage">
@@ -18,8 +20,8 @@ export default class ShoppinglistPage extends Component {
                     
                     
                     <div className="buttons-shoppinglistpage"> 
-                        <ButtonInfo />  
-                        <ButtonAdd />
+                        <InfoButton />
+                        <AddButton />
                     </div>
 
                 </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {ReactComponent as UserIcon} from '../icons/Button-User-Active.svg'
+import {ReactComponent as UserIcon} from '../../icons/Button-User-Active.svg'
 
 
 export default class MeineFamilieUser extends Component {

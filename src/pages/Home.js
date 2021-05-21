@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Headline from '../components/Headline'
-import MeineFamilie from '../components/MeineFamilie'
-import Shoppinglist from '../components/Shoppinglist'
+import MeineFamilie from '../components/MyFamily/MeineFamilie'
+import Shoppinglist from '../components/Shoppinglist/Shoppinglist'
 import Subheadline from '../components/Subheadline'
 
 export default class Home extends Component {

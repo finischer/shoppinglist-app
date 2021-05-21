@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {ReactComponent as ToDoBoxBlanco} from '../icons/ToDo-Box.svg'
-import {ReactComponent as ToDoBoxDone} from '../icons/ToDo-Box-Done.svg'
+import {ReactComponent as ToDoBoxBlanco} from '../../icons/ToDo-Box.svg'
+import {ReactComponent as ToDoBoxDone} from '../../icons/ToDo-Box-Done.svg'
 
 export default class ShoppinglistItem extends Component {
     constructor(props){

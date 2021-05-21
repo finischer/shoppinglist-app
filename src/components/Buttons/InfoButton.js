@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import {ReactComponent as ButtonAdd} from '../../icons/Button-Add.svg'
+import {ReactComponent as ButtonInfo} from '../../icons/Button-Info.svg'
 
-
-export default class AddButton extends Component {
-    
+export default class InfoButton extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -25,12 +23,11 @@ export default class AddButton extends Component {
         
             return( 
                 <div>
-                    <div className="button-add">
-                        <ButtonAdd onClick={this.handleClick}  />
+                    <div className="button-info">
+                        <ButtonInfo onClick={this.handleClick}  />
                     </div>
                     
                 </div>
             )
-        }    
-    
+        }   
 }

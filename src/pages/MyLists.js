@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AddButton from '../components/Buttons/AddButton'
 import Headline from '../components/Headline'
-import Lists from '../components/Lists'
+import Lists from '../components/Shoppinglist/Lists'
 import Subheadline from '../components/Subheadline'
 import AddShoppinglist from '../components/Forms/AddShoppinglist';
 

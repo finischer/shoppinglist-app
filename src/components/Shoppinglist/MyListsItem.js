@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
-import {ReactComponent as Arrow} from '../icons/Arrow.svg'
-import {ReactComponent as ShoppingCart} from '../icons/Shopping-Cart.svg'
+import {ReactComponent as Arrow} from '../../icons/Arrow.svg'
+import {ReactComponent as ShoppingCart} from '../../icons/Shopping-Cart.svg'
 
 export default class MyListsItem extends Component {
     render() {
