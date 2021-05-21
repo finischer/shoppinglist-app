@@ -94,6 +94,16 @@ li {
   margin-left: 38px;
 }
 
+.shoppinglist-home .shoppinglist-item li input {
+  background-color: #021C1E;
+  color: white;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 14px;
+}
+
 .shoppinglist-home .shoppinglist-item li p {
   display: inline;
   margin: 0;
