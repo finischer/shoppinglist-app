@@ -6,6 +6,7 @@ export default class ShoppinglistItem extends Component {
     constructor(props){
         super(props);
         this.state = {
+            id: this.props.key,
             product: this.props.product,
             date: this.props.date,
             active: false,
@@ -36,9 +37,12 @@ export default class ShoppinglistItem extends Component {
 
     proofProductHasValue(){
         if(this.state.product === ""){
+           
             this.setState({
                 product: "Produkt hinzufügen"
             })
+            
+           
         }
     }
     
@@ -91,24 +95,20 @@ export default class ShoppinglistItem extends Component {
     render() {
         
         let isProduct = this.state.product === "Produkt hinzufügen" ? true : false;
-    
         let listItem = this.state.inputField ?  <input id="input-shoppinglist" type="text" autoFocus  placeholder="Produkt hinzufügen" value={`${isProduct ? "" : this.state.product}`} onChange={this.handleChange} contentEditable="true" onKeyDown={this._pressEnter}  /> : <p className={`${isProduct ? "no-product" : ""}`} onClick={this.handleItemClick} > {this.state.product} <span> Hinzugefügt am {this.state.date} </span></p>;
         let toDoBox = this.state.active ? <ToDoBoxDone onClick={this.handleClick} /> : <ToDoBoxBlanco onClick={this.handleClick} /> ;
             
         
         return (
-                <div className={`shoppinglist-item ${this.state.active ? "check" : ""}`}> 
-                <li> 
-                    <div className={"todo-box"}>
-                        {toDoBox}
-                    </div> 
-                    
-                    <div className="listitem-shoppinglist" ref={this.wrapperRef}>
-                        {listItem}
-                        <hr />
-                    </div>
-                </li>
-                    
+            <div className={`shoppinglist-item shoppinglist-item-content ${this.state.active ? "check" : ""}`}> 
+                <div className={"todo-box"}>
+                    {toDoBox}
+                </div> 
+                
+                <div className="listitem-shoppinglist" ref={this.wrapperRef}>
+                    {listItem}
+                    <hr />
+                </div>     
             </div>
             )
         

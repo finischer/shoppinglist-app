@@ -36,6 +36,15 @@ hr {
   cursor: pointer;
 }
 
+.btn:hover {
+  opacity: 70%;
+}
+
+.btn-delete {
+  background-color: #C42222;
+  color: white;
+}
+
 li {
   list-style-type: none;
 }
@@ -132,7 +141,7 @@ li {
   content: url(../icons/ToDo-Box-Done.svg);
 }
 
-.button-add svg, .button-close svg {
+.button-add svg, .button-close svg, .button-info svg {
   cursor: pointer;
 }
 
@@ -142,17 +151,14 @@ li {
 
 .shoppinglist-home .shoppinglist-item {
   display: inline;
-}
-
-.shoppinglist-home .shoppinglist-item li {
   margin-bottom: 10px;
 }
 
-.shoppinglist-home .shoppinglist-item li .listitem-shoppinglist {
+.shoppinglist-home .shoppinglist-item .listitem-shoppinglist {
   margin-left: 38px;
 }
 
-.shoppinglist-home .shoppinglist-item li input {
+.shoppinglist-home .shoppinglist-item input {
   background-color: #021C1E;
   color: white;
   border: none;
@@ -162,35 +168,35 @@ li {
   font-size: 14px;
 }
 
-.shoppinglist-home .shoppinglist-item li ::-webkit-input-placeholder {
+.shoppinglist-home .shoppinglist-item ::-webkit-input-placeholder {
   font-style: italic;
 }
 
-.shoppinglist-home .shoppinglist-item li :-ms-input-placeholder {
+.shoppinglist-home .shoppinglist-item :-ms-input-placeholder {
   font-style: italic;
 }
 
-.shoppinglist-home .shoppinglist-item li ::-ms-input-placeholder {
+.shoppinglist-home .shoppinglist-item ::-ms-input-placeholder {
   font-style: italic;
 }
 
-.shoppinglist-home .shoppinglist-item li ::placeholder {
+.shoppinglist-home .shoppinglist-item ::placeholder {
   font-style: italic;
 }
 
-.shoppinglist-home .shoppinglist-item li p {
+.shoppinglist-home .shoppinglist-item p {
   display: inline;
   margin: 0;
   vertical-align: middle;
 }
 
-.shoppinglist-home .shoppinglist-item li p span {
+.shoppinglist-home .shoppinglist-item p span {
   display: block;
   color: #8F8F8F;
   font-size: 8px;
 }
 
-.shoppinglist-home .shoppinglist-item li .no-product {
+.shoppinglist-home .shoppinglist-item .no-product {
   color: #8F8F8F;
   font-style: italic;
   font-family: 'Balsamiq Sans', cursive;
@@ -252,7 +258,7 @@ li {
   width: 100%;
   height: 86px;
   position: fixed;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   margin: 0;
   background-color: #004445;
@@ -276,10 +282,6 @@ li {
 
 .navigation svg {
   cursor: pointer;
-}
-
-.lists-mylists {
-  margin-top: 15px;
 }
 
 .lists-mylists hr {
@@ -333,20 +335,27 @@ li {
   float: left;
 }
 
+.subheadline-mylists {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
 .subheadline-mylists .subheadline-trennlinie {
-  position: absolute;
   float: left;
   width: 157px;
-  margin-right: 25%;
 }
 
 .subheadline-mylists svg {
-  position: relative;
-  margin-left: 88%;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
 }
 
 .shoppinglistpage .subheadline-shoppinglistpage {
+  width: 100%;
   display: inline-block;
+  position: relative;
 }
 
 .shoppinglistpage .subheadline-shoppinglistpage .subheadline-trennlinie {
@@ -355,9 +364,27 @@ li {
 }
 
 .shoppinglistpage .subheadline-shoppinglistpage .buttons-shoppinglistpage {
-  display: inline;
+  display: inline-block;
   position: absolute;
-  right: 0;
-  margin-right: 45px;
+  right: -9px;
+  bottom: 10px;
+}
+
+.shoppinglistpage .subheadline-shoppinglistpage .buttons-shoppinglistpage .button-info {
+  position: absolute;
+  right: 39px;
+}
+
+.shoppinglistpage .buttons-info .btn-delete {
+  position: absolute;
+  bottom: 75px;
+}
+
+.shoppinglistpage .table-shoppinglist-info {
+  width: 100%;
+}
+
+.shoppinglistpage .table-shoppinglist-info tr {
+  height: 5px;
 }
 /*# sourceMappingURL=layout.css.map */

@@ -6,6 +6,7 @@ $primary:#2C7873;
 $nav-background: #004445;
 $container-background: #021C1E;
 $grey: #8F8F8F;
+$button-delete: #C42222;
 
 
 //DESIGN - START
@@ -46,6 +47,15 @@ hr{
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
+}
+
+.btn:hover{
+    opacity: 70%;
+}
+
+.btn-delete{
+    background-color: $button-delete;
+    color:white;
 }
 
 li{
@@ -138,7 +148,7 @@ li{
     content: url(../icons/ToDo-Box-Done.svg);
 }
 
-.button-add, .button-close{
+.button-add, .button-close, .button-info{
     svg{
         cursor: pointer;
     }
@@ -154,7 +164,7 @@ li{
         display: inline;
         
 
-        li{
+    
             margin-bottom: 10px;
            
 
@@ -200,7 +210,7 @@ li{
 
             }
 
-        }
+        
     }
 
     .check{
@@ -267,7 +277,7 @@ li{
     width: 100%;
     height: 86px;
     position: fixed;
-    bottom: 0;
+    bottom: -2px;
     left:0;
     margin:0;
     background-color: $nav-background;
@@ -291,6 +301,8 @@ li{
     svg{
         cursor: pointer;
     }
+
+    
 }
 
 //PAGE - MYLISTS
@@ -300,7 +312,6 @@ li{
     hr{
         border: 0.3px solid $grey;
     }
-    margin-top: 15px;
     
     .mylists-item{
         display: inline;
@@ -358,16 +369,19 @@ li{
 
 .subheadline-mylists{
     
+    position:relative;
+    display: inline-block;
+    width: 100%;
+
     .subheadline-trennlinie{ 
-        position: absolute;    
         float: left;
         width: 157px; 
-        margin-right: 25%;
     }
 
     svg{
-        position: relative;
-        margin-left: 88%;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
     }
 }
 
@@ -381,15 +395,39 @@ li{
             float: left;
         }
 
+        width: 100%;
         display: inline-block;
-        
+        position:relative;
+
+
         .buttons-shoppinglistpage{
-            display: inline;
+            display: inline-block;
             position: absolute;
-            right: 0;
-            margin-right: 45px;
+            right: -9px;
+            bottom: 10px;
+
+            .button-info{
+                position: absolute;
+                right: 39px;
+            }
         }
        
+    }
+
+    .buttons-info{
+        .btn-delete{
+            position: absolute;
+            bottom: 75px;
+        }
+    }
+
+    .table-shoppinglist-info{
+        
+        width: 100%;
+        
+        tr{
+            height: 5px;
+        }
     }
 
 }

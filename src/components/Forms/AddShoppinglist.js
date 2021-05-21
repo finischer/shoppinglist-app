@@ -38,11 +38,11 @@ export default class AddShoppinglist extends Component {
                         </div>
 
                         <form>
-                            <label for="shoppinglist-name"> Name</label><br/>
+                            <label htmlFor="shoppinglist-name"> Name</label><br/>
                             <input type="text" id="shoppinglist-name" name="shoppinglist-name" />
                             <br/>
                             <br/>
-                            <label for="shoppinglist-id"> Einkaufsliste nach ID hinzufügen</label><br/>
+                            <label htmlFor="shoppinglist-id"> Einkaufsliste nach ID hinzufügen</label><br/>
                             <input type="text" id="shoppinglist-id" name="shoppinglist-id" />
 
                         </form>
