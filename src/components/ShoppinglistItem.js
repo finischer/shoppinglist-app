@@ -18,6 +18,7 @@ export default class ShoppinglistItem extends Component {
         this.handleChange = this.handleChange.bind(this);
         this._pressEnter = this._pressEnter.bind(this);
         this.handleClickOutside = this.handleClickOutside.bind(this);
+        this.proofProductHasValue = this.proofProductHasValue.bind(this);
 
         this.wrapperRef = React.createRef();
     }
@@ -30,6 +31,18 @@ export default class ShoppinglistItem extends Component {
     componentWillUnmount() {
         document.removeEventListener('mousedown', this.handleClickOutside);
     }
+
+    // Helpers
+
+    proofProductHasValue(){
+        if(this.state.product === ""){
+            this.setState({
+                product: "Produkt hinzufügen"
+            })
+        }
+    }
+    
+
 
 
     //Handle-Functions
@@ -52,8 +65,12 @@ export default class ShoppinglistItem extends Component {
         })
     }
 
+    
     handleClickOutside(e){
+        
+
         if (this.wrapperRef && !this.wrapperRef.current.contains(e.target)) {
+            this.proofProductHasValue();
             this.setState({
                 inputField: false
             })
@@ -64,6 +81,7 @@ export default class ShoppinglistItem extends Component {
 
     _pressEnter(e){
         if(e.keyCode === 13 ){
+            this.proofProductHasValue();
             this.setState({
                 inputField: false
             })
@@ -73,9 +91,8 @@ export default class ShoppinglistItem extends Component {
     render() {
         let listItem = this.state.inputField ?  <input id="input-shoppinglist" type="text" autoFocus  placeholder="Produkt hinzufügen" value={this.state.product} onChange={this.handleChange} contentEditable="true" onKeyDown={this._pressEnter}  /> : <p onClick={this.handleItemClick}>{this.state.product} <span> Hinzugefügt am {this.state.date} </span></p>;
         let toDoBox = this.state.active ? <ToDoBoxDone onClick={this.handleClick} /> : <ToDoBoxBlanco onClick={this.handleClick} /> ;
-        
             return (
-                <div className={`shoppinglist-item ${this.state.active ? "check" : ""}`}>
+                <div className={`shoppinglist-item ${this.state.active ? "check" : ""}`}> 
                 <li> 
                     <div className={"todo-box"}>
                         {toDoBox}
