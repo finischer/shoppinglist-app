@@ -17,8 +17,22 @@ export default class ShoppinglistItem extends Component {
         this.handleItemClick = this.handleItemClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this._pressEnter = this._pressEnter.bind(this);
+        this.handleClickOutside = this.handleClickOutside.bind(this);
+
+        this.wrapperRef = React.createRef();
     }
 
+
+    componentDidMount() {
+        document.addEventListener('mousedown', this.handleClickOutside);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+
+
+    //Handle-Functions
     handleClick(){
         this.setState({
             active: !this.state.active
@@ -38,8 +52,18 @@ export default class ShoppinglistItem extends Component {
         })
     }
 
+    handleClickOutside(e){
+        if (this.wrapperRef && !this.wrapperRef.current.contains(e.target)) {
+            this.setState({
+                inputField: false
+            })
+        }
+    }
+
+    //Press-Functions
+
     _pressEnter(e){
-        if(e.keyCode === 13){
+        if(e.keyCode === 13 ){
             this.setState({
                 inputField: false
             })
@@ -47,18 +71,19 @@ export default class ShoppinglistItem extends Component {
     }
         
     render() {
-
-        let listItem = this.state.inputField ?  <input type="text" placeholder="Produkt hinzufügen" value={this.state.product} onChange={this.handleChange} contentEditable="true" onKeyDown={this._pressEnter} /> : <p onClick={this.handleItemClick}>{this.state.product} <span> Hinzugefügt am {this.state.date} </span></p>;
+        let listItem = this.state.inputField ?  <input id="input-shoppinglist" type="text" placeholder="Produkt hinzufügen" value={this.state.product} onChange={this.handleChange} contentEditable="true" onKeyDown={this._pressEnter}  /> : <p onClick={this.handleItemClick}>{this.state.product} <span> Hinzugefügt am {this.state.date} </span></p>;
+        let toDoBox = this.state.active ? <ToDoBoxBlanco onClick={this.handleClick} /> : <ToDoBoxDone onClick={this.handleClick} />;
         
-        if(this.state.active){
+
+
             return (
-                <div className={"shoppinglist-item"}>
+                <div className={`shoppinglist-item ${this.state.active ? "" : "check"}`}>
                 <li> 
-                    <div className="todo-box">
-                        <ToDoBoxBlanco onClick={this.handleClick} />
+                    <div className={"todo-box"}>
+                        {toDoBox}
                     </div> 
                     
-                    <div className="listitem-shoppinglist">
+                    <div className="listitem-shoppinglist" ref={this.wrapperRef}>
                         {listItem}
                         <hr />
                     </div>
@@ -66,26 +91,6 @@ export default class ShoppinglistItem extends Component {
                     
             </div>
             )
-        }else{
-            return (
-                <div className={"shoppinglist-item check"}>
-                <li> 
-                    <div className="todo-box">
-                        <ToDoBoxDone onClick={this.handleClick} />
-                    </div> 
-                    
-                    <div className="listitem-shoppinglist">
-                        {listItem} 
-                        <hr />
-                    </div>
-                   
-
-
-                </li>
-                
-                
-            </div>
-            )
-        }
+        
     }
 }
