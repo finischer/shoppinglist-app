@@ -1,21 +1,22 @@
 import axios from 'axios';
 
 
+
+axios.defaults.baseURL = 'https://famlist-backend.herokuapp.com/api'
+axios.defaults.headers['Access-Control-Allow-Origin'] = '*'
+
 export async function signup(user) {
   return await
     axios({
         method: 'post',
-        url: " https://famlist-backend.herokuapp.com/api/signup",
+        url: "/signup",
         data: user,
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        }
     })
     .then( response => {
         console.log(response)
     })
     .catch(function (error) {
-        console.log(error);
+        console.error(error)
     })
 }
 

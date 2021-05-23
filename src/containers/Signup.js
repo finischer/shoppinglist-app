@@ -8,11 +8,12 @@ import {signup} from '../api';
 export default class Signup extends Component {
     constructor(props){
         super(props);
+        this.state = {
+            success: false
+        }
         this.handleSignup = this.handleSignup.bind(this);
     }
-
     
-
     handleSignup(){
 
         const vorname = document.getElementById('vorname').value
@@ -24,13 +25,12 @@ export default class Signup extends Component {
             email,
             passwort
         };
-
+        
         signup(user);
     }
 
     
     render() {
-        
         
         return (
             <div className="container form-container">
