@@ -36,10 +36,6 @@ hr {
   cursor: pointer;
 }
 
-.btn:hover {
-  opacity: 70%;
-}
-
 .btn-delete {
   background-color: #C42222;
   color: white;
