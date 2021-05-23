@@ -19,9 +19,13 @@ export default class Signup extends Component {
         const email = document.getElementById('email').value
         const passwort = document.getElementById('passwort').value
         
-        signup(vorname, email, passwort);
+        const user = {
+            vorname,
+            email,
+            passwort
+        };
 
-        
+        signup(user);
     }
 
     
