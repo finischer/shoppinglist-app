@@ -50,8 +50,10 @@ hr{
 }
 
 .btn:hover{
-    opacity: 30%;
+    background: rgba(255, 255, 255, 0.767);
 }
+
+
 
 .btn-delete{
     background-color: $button-delete;

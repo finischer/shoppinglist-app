@@ -51,8 +51,9 @@ export default class Signup extends Component {
                 <p id="login-link">Bereits ein Account? <br /> <Link to="/login">Einloggen</Link></p>
                 
             </form>
-
+        
             <button className="btn btn-signup" onClick={this.handleSignup}>Registrieren</button>
+        
 
             
         </div>
