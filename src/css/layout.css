@@ -401,9 +401,9 @@ li {
   height: 5px;
 }
 
-.login {
+.form-container {
   width: 70%;
-  height: 270px;
+  height: auto;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -411,11 +411,7 @@ li {
           transform: translate(-50%, -50%);
 }
 
-.login form {
-  width: 100%;
-}
-
-.login input[type=text], .login input[type=password] {
+.form-container input[type=text], .form-container input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 13px 0;
@@ -434,7 +430,7 @@ li {
   font-size: 16px;
 }
 
-.login .btn-login, .login #signup-link {
+.form-container .btn-signup, .form-container #login-link {
   position: relative;
   margin-top: 15px;
   left: 50%;
@@ -442,49 +438,7 @@ li {
           transform: translate(-50%);
 }
 
-.login #signup-link {
-  position: absolute;
-  text-decoration: underline;
-}
-
-.signup {
-  height: 360px;
-  width: 70%;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.signup input[type=text], .signup input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 13px 0;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 0 3px 6px #000000;
-          box-shadow: 0 3px 6px #000000;
-  color: #021C1E;
-  border: none;
-  outline: none;
-  font-weight: bold;
-  font-family: 'Balsamiq Sans', cursive;
-  font-size: 16px;
-}
-
-.signup .btn-signup {
-  position: relative;
-  margin-top: 15px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-}
-
-.signup p {
+.form-container #login-link {
   text-align: center;
 }
 /*# sourceMappingURL=layout.css.map */
