@@ -7,11 +7,11 @@ import Navigation from './components/Navigation';
 import './css/layout.css';
 
 //Pages
-import Home from './pages/Home';
-import MyLists from './pages/MyLists';
-import ShoppinglistPage from './pages/ShoppinglistPage';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Home from './containers/Home';
+import MyLists from './containers/MyLists';
+import ShoppinglistPage from './containers/ShoppinglistPage';
+import Login from './containers/Login';
+import Signup from './containers/Signup';
 
 
 
