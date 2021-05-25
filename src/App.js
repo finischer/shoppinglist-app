@@ -63,6 +63,9 @@ function App() {
                     <Route exact path="/shoppinglists/list">
                         <ShoppinglistPage />
                     </Route>
+                    <Route path="/login">
+                        <Login setToken={setToken} />
+                    </Route>
                 </Router>
             </Switch>
         </BrowserRouter>

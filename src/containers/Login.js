@@ -3,9 +3,11 @@ import {login} from '../api';
 import PropTypes from 'prop-types';
 
 
+
 export default function Login ({setToken}) {
     const [email, setEmail] = useState('')
     const [passwort, setPasswort] = useState('')
+    const sessionToken = sessionStorage.getItem('token')
 
     const handleSubmit = async e =>{
         e.preventDefault()
@@ -23,8 +25,8 @@ export default function Login ({setToken}) {
         setToken(token);
     }
 
-    
-    return (
+    if(!sessionToken){
+        return (
             <div className="container form-container">
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="email"><b>E-Mail*</b></label>
@@ -36,12 +38,15 @@ export default function Login ({setToken}) {
                     <button className="btn btn-signup" type="submit">Login</button>
                     <p id="login-link"> <a href="/signup">Registrieren</a></p> 
                 </form>
-
-                
-
-
             </div>
         )
+    }
+
+    return (
+        <div className="container already-logged-in">
+            <h1> Du bist bereits eingeloggt!</h1>
+        </div>
+    )
     
 }
 

@@ -83,6 +83,15 @@ li {
   margin-bottom: 30px;
 }
 
+.already-logged-in {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+}
+
 .headline-trennlinie {
   margin-bottom: 30px;
 }
