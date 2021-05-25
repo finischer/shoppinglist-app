@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
-
 import {signup} from '../api';
-
-
 
 export default class Signup extends Component {
     constructor(props){
@@ -11,21 +7,21 @@ export default class Signup extends Component {
         this.state = {
             success: false
         }
-        this.handleSignup = this.handleSignup.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     
-    handleSignup(){
-
+    handleSubmit(){
+        
         const vorname = document.getElementById('vorname').value
         const email = document.getElementById('email').value
-        const passwort = document.getElementById('passwort').value
+        const passwort = document.getElementById('password').value
         
         const user = {
             vorname,
             email,
             passwort
         };
-        
+         
         signup(user);
     }
 
@@ -34,7 +30,7 @@ export default class Signup extends Component {
         
         return (
             <div className="container form-container">
-            <form id="signup-form">
+            <form id="signup-form" onSubmit={this.handleSubmit}>
                 <label htmlFor="vorname"><b>Vorname*</b></label>
                 <input id="vorname" type="text" placeholder="Vornamen eingeben" name="vorname"  required />
 
@@ -42,17 +38,16 @@ export default class Signup extends Component {
                 <input id="email" type="text" placeholder="E-Mail eingeben" name="email"  required />
 
                 <label htmlFor="password"><b>Password*</b></label>
-                <input id="passwort" type="password" placeholder="Passwort eingeben" name="passwort" required />
+                <input id="password" type="password" placeholder="Passwort eingeben" name="passwort" required />
 
                 <label htmlFor="password"><b>Password wiederholen*</b></label>
                 <input id="password-repeat" type="password" placeholder="Passwort wiederholen" name="passwort-repeat" required />     
 
-                
-                <p id="login-link">Bereits ein Account? <br /> <Link to="/login">Einloggen</Link></p>
+                <button className="btn btn-signup" type="submit">Registrieren</button>
+                <p id="login-link">Bereits ein Account? <br /> <a href="/login">Einloggen</a></p>
                 
             </form>
         
-            <button className="btn btn-signup" onClick={this.handleSignup}>Registrieren</button>
         
 
             

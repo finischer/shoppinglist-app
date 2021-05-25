@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="50" viewBox="0 0 52 50">
+<svg id="svg-home" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="50" viewBox="0 0 52 50">
   <defs>
     <filter id="Pfad_1" x="0" y="0" width="52" height="50" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>

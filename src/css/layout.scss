@@ -69,9 +69,21 @@ a:active{
     color: grey;
 }
 
-a:hover{
-    opacity: 0.8;
+
+a:hover {
+    fill: white;
     cursor: pointer;
+}
+
+#home-btn{
+    background: none;
+    border: 0;
+}
+
+#svg-family:hover, #svg-home:hover, #svg-list:hover, #svg-settings:hover, #svg-user:hover {
+    path{
+        fill: white;
+    }
 }
 
 li{

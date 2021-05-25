@@ -1,25 +1,50 @@
-import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react'
+import {login} from '../api';
+import PropTypes from 'prop-types';
 
 
-export default class Auth extends Component {
-    render() {
-        return (
+export default function Login ({setToken}) {
+    const [email, setEmail] = useState('')
+    const [passwort, setPasswort] = useState('')
+
+    const handleSubmit = async e =>{
+        e.preventDefault()
+        // const email = document.getElementById('email').value
+        // const passwort = document.getElementById('password').value
+        
+        const user = {
+            email,
+            passwort
+        };
+
+        const response = await login(user);
+        const token = response.data.token
+       
+        setToken(token);
+    }
+
+    
+    return (
             <div className="container form-container">
-                <form>
-
+                <form onSubmit={handleSubmit}>
                     <label htmlFor="email"><b>E-Mail*</b></label>
-                    <input type="text" placeholder="E-Mail eingeben" name="email"  required />
+                    <input id="email" type="text" placeholder="E-Mail eingeben" name="email" onChange={ e => setEmail(e.target.value)}  required />
 
                     <label htmlFor="password"><b>Password*</b></label>
-                    <input type="password" placeholder="Passwort eingeben" name="password" required />
-
-
-                    <button className="btn btn-signup" type="submit">Login</button>
-                    <p id="login-link"> <Link to="/signup">Registrieren</Link></p>
+                    <input id="password" type="password" placeholder="Passwort eingeben" name="password" onChange={ e => setPasswort(e.target.value)}  required />
                     
+                    <button className="btn btn-signup" type="submit">Login</button>
+                    <p id="login-link"> <a href="/signup">Registrieren</a></p> 
                 </form>
+
+                
+
+
             </div>
         )
-    }
+    
+}
+
+Login.propTypes = {
+    setToken: PropTypes.func.isRequired
 }

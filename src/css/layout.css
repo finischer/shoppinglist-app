@@ -54,8 +54,17 @@ a:active {
 }
 
 a:hover {
-  opacity: 0.8;
+  fill: white;
   cursor: pointer;
+}
+
+#home-btn {
+  background: none;
+  border: 0;
+}
+
+#svg-family:hover path, #svg-home:hover path, #svg-list:hover path, #svg-settings:hover path, #svg-user:hover path {
+  fill: white;
 }
 
 li {

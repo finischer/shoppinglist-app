@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.145" height="48.248" viewBox="0 0 48.145 48.248">
+<svg id="svg-settings" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.145" height="48.248" viewBox="0 0 48.145 48.248">
   <defs>
     <filter id="settings-svgrepo-com" x="0" y="0" width="48.145" height="48.248" filterUnits="userSpaceOnUse">
       <feOffset dy="3" input="SourceAlpha"/>
