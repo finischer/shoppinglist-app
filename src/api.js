@@ -86,9 +86,9 @@ export async function addShoppinglistByName(user, new_shoppinglist){
 }
 
 
-export async function addShoppinglistByID(user, id){
-    const userID = user._id
-}
+// export async function addShoppinglistByID(user, id){
+//     return
+// }
 
 
 

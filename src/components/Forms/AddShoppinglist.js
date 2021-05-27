@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import CloseButton from '../Buttons/CloseButton'
-import StandardButton from '../Buttons/StandardButton'
 import Headline from '../Headline'
 
 
-import {addShoppinglistByID, addShoppinglistByName} from '../../api';
+import { addShoppinglistByName } from '../../api';
 
 
 
