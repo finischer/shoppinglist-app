@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Headline from '../components/Headline'
-import MeineFamilie from '../components/MyFamily/MeineFamilie'
+// import MeineFamilie from '../components/MyFamily/MeineFamilie'
 import Subheadline from '../components/Subheadline'
 
 export default class Home extends Component {
