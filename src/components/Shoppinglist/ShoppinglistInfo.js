@@ -72,7 +72,7 @@ export default class ShoppinglistInfo extends Component {
 
                    <div className="buttons-info">
                         <div id="delete-list">
-                            <DeleteButton name="Liste löschen" />
+                            <DeleteButton disabled name="Liste löschen" />
 
                         </div>
                         <div id="close-list">

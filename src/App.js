@@ -16,6 +16,8 @@ import Signup from './containers/Signup';
 // HOOKS
 import useToken from './Hooks/useToken';
 import useUser from './Hooks/useUser';
+import MyFamily from './containers/MyFamily';
+import Settings from './containers/Settings';
 
 
 function App() {
@@ -66,6 +68,12 @@ function App() {
                     </Route>
                     <Route path="/login">
                         <Login setToken={setToken} />
+                    </Route>
+                    <Route exact path="/myfamily">
+                        <MyFamily />
+                    </Route>
+                    <Route exact path="/settings">
+                        <Settings />
                     </Route>
                 </Router>
             </Switch>

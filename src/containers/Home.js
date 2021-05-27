@@ -7,20 +7,7 @@ export default class Home extends Component {
     constructor(props){
         super(props);
         this.state = {
-            items: [
-                {
-                    product: "Eier",
-                    date: "17.05.2021"
-                },
-                {
-                    product: "Milch",
-                    date: "17.05.2021"
-                },
-                {
-                    product: "Käse",
-                    date: "17.05.2021"
-                }
-            ]
+            items: []
         }
     }
     
@@ -29,8 +16,9 @@ export default class Home extends Component {
             <div>
                 <Headline title={`Hallo, ${this.props.user.vorname}`} />
                 <Subheadline title="Aktuelle Einkaufsliste" />
+                <p> Wird bald hier zu sehen sein</p>
                 <Subheadline title="Meine Familie" />
-                <MeineFamilie />
+                <p> Wird bald hier zu sehen sein</p>
             </div>
         )
     }

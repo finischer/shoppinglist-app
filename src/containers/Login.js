@@ -47,6 +47,7 @@ export default function Login ({setToken, setUser}) {
     return (
         <div className="container already-logged-in">
             <h1> Du bist bereits eingeloggt!</h1>
+            <p> Ausloggen gibt es noch nicht :D </p>
         </div>
     )
     
