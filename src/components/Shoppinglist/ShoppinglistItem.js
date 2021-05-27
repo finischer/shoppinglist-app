@@ -2,13 +2,17 @@ import React, { Component } from 'react'
 import {ReactComponent as ToDoBoxBlanco} from '../../icons/ToDo-Box.svg'
 import {ReactComponent as ToDoBoxDone} from '../../icons/ToDo-Box-Done.svg'
 
+import {addProductToShoppinglist} from '../../api';
+
+
 export default class ShoppinglistItem extends Component {
     constructor(props){
         super(props);
         this.state = {
-            id: this.props.key,
-            product: this.props.product,
-            date: this.props.date,
+            shoppinglist_id: this.props.shoppinglistID,
+            product_id: this.props.key,
+            name: this.props.product,
+            hinzugefuegt: this.props.hinzugefuegt,
             active: false,
             inputField: false 
         };
@@ -36,10 +40,10 @@ export default class ShoppinglistItem extends Component {
     // Helpers
 
     proofProductHasValue(){
-        if(this.state.product === ""){
+        if(this.state.name === ""){
            
             this.setState({
-                product: "Produkt hinzufügen"
+                name: "Produkt hinzufügen"
             })
             
            
@@ -65,14 +69,12 @@ export default class ShoppinglistItem extends Component {
 
     handleChange(e){
         this.setState({
-            product: e.target.value
+            name: e.target.value
         })
     }
 
     
     handleClickOutside(e){
-        
-
         if (this.wrapperRef && !this.wrapperRef.current.contains(e.target)) {
             this.proofProductHasValue();
             this.setState({
@@ -89,13 +91,22 @@ export default class ShoppinglistItem extends Component {
             this.setState({
                 inputField: false
             })
+
+            const updated_list = {
+                name: this.state.name
+            }
+
+            addProductToShoppinglist(this.state.shoppinglist_id, updated_list )
         }
     }
         
     render() {
         
-        let isProduct = this.state.product === "Produkt hinzufügen" ? true : false;
-        let listItem = this.state.inputField ?  <input id="input-shoppinglist" type="text" autoFocus  placeholder="Produkt hinzufügen" value={`${isProduct ? "" : this.state.product}`} onChange={this.handleChange} contentEditable="true" onKeyDown={this._pressEnter}  /> : <p className={`${isProduct ? "no-product" : ""}`} onClick={this.handleItemClick} > {this.state.product} <span> Hinzugefügt am {this.state.date} </span></p>;
+        let datum = new Date()
+        var heute = datum.getDate()+ "." + (datum.getMonth()+1)+"." + datum.getFullYear()
+
+        let isProduct = this.state.name === "Produkt hinzufügen" ? true : false;
+        let listItem = this.state.inputField ?  <input id="input-shoppinglist" type="text" autoFocus  placeholder="Produkt hinzufügen" value={`${isProduct ? "" : this.state.name}`} onChange={this.handleChange} contentEditable="true" onKeyDown={this._pressEnter}  /> : <p className={`${isProduct ? "no-product" : ""}`} onClick={this.handleItemClick} > {this.state.name} <span> Hinzugefügt am {this.state.hinzugefuegt ? this.state.hinzugefuegt : heute} </span></p>;
         let toDoBox = this.state.active ? <ToDoBoxDone onClick={this.handleClick} /> : <ToDoBoxBlanco onClick={this.handleClick} /> ;
             
         

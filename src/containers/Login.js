@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 
-export default function Login ({setToken}) {
+export default function Login ({setToken, setUser}) {
     const [email, setEmail] = useState('')
     const [passwort, setPasswort] = useState('')
     const sessionToken = sessionStorage.getItem('token')
@@ -21,7 +21,9 @@ export default function Login ({setToken}) {
 
         const response = await login(user);
         const token = response.data.token
-       
+        
+        setUser(response.data)
+
         setToken(token);
     }
 

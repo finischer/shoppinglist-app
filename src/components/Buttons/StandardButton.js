@@ -4,7 +4,7 @@ export default class StandardButton extends Component {
     
     render() {
         return (
-            <button className="btn" onClick={this.props.handleClick}> {this.props.name} </button>
+            <button className="btn" onClick={this.props.handleClick} type={this.props.type}> {this.props.name} </button>
         )
     }
 }

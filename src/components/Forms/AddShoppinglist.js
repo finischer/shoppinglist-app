@@ -4,6 +4,9 @@ import StandardButton from '../Buttons/StandardButton'
 import Headline from '../Headline'
 
 
+import {addShoppinglistByID, addShoppinglistByName} from '../../api';
+
+
 
 export default class AddShoppinglist extends Component {
     constructor(props){
@@ -13,6 +16,7 @@ export default class AddShoppinglist extends Component {
         }
 
         this.handleClickClose = this.handleClickClose.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
 
@@ -21,6 +25,27 @@ export default class AddShoppinglist extends Component {
 
         for(var i=0; i<modal.length; i++){
             modal[i].style.display = 'none';
+        }
+    }
+
+
+    async handleSubmit(e){
+        e.preventDefault()
+        
+        const listName = document.getElementById('shoppinglist-name').value
+        const listID = document.getElementById('shoppinglist-id').value
+        
+
+        if(listID){
+
+        }else if(listName){
+            const new_list = {
+                title: listName
+            }
+            
+            await addShoppinglistByName(this.props.user, new_list)
+
+            window.location.reload();
         }
     }
 
@@ -37,17 +62,18 @@ export default class AddShoppinglist extends Component {
                             <Headline title="Einkaufsliste hinzufügen" />
                         </div>
 
-                        <form>
+                        <form onSubmit={this.handleSubmit}>
                             <label htmlFor="shoppinglist-name"> Name</label><br/>
                             <input type="text" id="shoppinglist-name" name="shoppinglist-name" />
                             <br/>
                             <br/>
                             <label htmlFor="shoppinglist-id"> Einkaufsliste nach ID hinzufügen</label><br/>
-                            <input type="text" id="shoppinglist-id" name="shoppinglist-id" />
-
+                            <input disabled type="text" id="shoppinglist-id" name="shoppinglist-id" placeholder="Funktion bald verfügbar" />
+                            <button className="btn" type="submit"> Hinzufügen </button>
                         </form>
 
-                        <StandardButton name="Hinzufügen" />
+
+                        
                     </div>
                 </div> 
             </div>

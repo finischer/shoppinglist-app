@@ -7,9 +7,9 @@ export default class Lists extends Component {
         return (
             <div className="lists-mylists">
                 <div className="container">
-                   <MyListsItem name="Einkaufsliste #1" amount="3" />
-                   <MyListsItem name="Einkaufsliste #2" amount="8" />
-                   <MyListsItem name="Einkaufsliste #3" amount="10" />
+                    { this.props.shoppinglists.map( (list) => {
+                        return <MyListsItem key={list._id} id={list._id} name={list.title} amount={list.items.length} />
+                    })}
                 </div>
             </div>
         )

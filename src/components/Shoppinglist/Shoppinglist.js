@@ -3,15 +3,10 @@ import ShoppinglistItem from './ShoppinglistItem'
 
 export default class Shoppinglist extends Component {
     render() {
-        
-        const listProducts = this.props.items.map((item) =>
-        <li key={item.id}> <ShoppinglistItem id={item.id} product={item.product} date={item.date} /> </li>
-        );
-                        
         return (
             <div className="shoppinglist-home">
                 <div className="container">
-                    {listProducts}
+                    {this.props.shoppinglist.items.map( item =>  <li key={item._id}>  <ShoppinglistItem key={item._id} shoppinglistID={this.props.shoppinglist._id} product={item.name} hinzugefuegt={item.hinzugefuegt} /> </li> ) }
                 </div>
             </div>
         )

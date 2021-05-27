@@ -25,14 +25,14 @@ export default class ShoppinglistInfo extends Component {
                 <div className="container modal-content">
                     
                     <div className="headline-button">
-                        <Headline title="Einkaufsliste #1" />
+                        <Headline title={this.props.shoppinglist.title} />
                     </div>
 
                     <table className="table-shoppinglist-info">
                         <tbody>
                             <tr>
                                 <td>Einkaufslisten-ID:</td>
-                                <td>123456789</td>
+                                <td id="table-data-shoppinglist-id">{this.props.shoppinglist._id}</td>
                             </tr>
 
                             <tr>
@@ -42,7 +42,7 @@ export default class ShoppinglistInfo extends Component {
 
                             <tr>
                                 <td>Anzahl Produkte:</td>
-                                <td>{this.props.amount}</td>
+                                <td>{this.props.shoppinglist.items.length}</td>
                             </tr>
 
                             <tr>
@@ -59,7 +59,7 @@ export default class ShoppinglistInfo extends Component {
                             </tr>
 
                             <tr>
-                                <td>Letzte Änderung am:</td>
+                                <td>Aktualisiert:</td>
                                 <td>17.05.2021</td>
                             </tr>
 

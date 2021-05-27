@@ -31,7 +31,66 @@ export async function login(user) {
       .catch(function (error) {
           return console.error(error)
       })
-  }
+}
+
+
+export async function getShoppinglistsFromUser(user){
+    const userID = user._id
+    
+    return await
+        axios({
+            method: 'get',
+            url: `/user/${userID}/shoppinglists`
+        })
+        .then( response => response )
+        .catch( error => console.error(error))
+}
+
+
+export async function updateShoppinglist(shoppinglist){
+    const shoppinglistID = shoppinglist._id
+
+    return await
+        axios({
+            method: 'put',
+            url: `/shoppinglist/${shoppinglistID}`,
+            data: shoppinglist
+        })
+        .then( response => response )
+        .catch( error => console.error(error))
+}
+
+export async function addProductToShoppinglist(shoppinglistID, data){
+    return await
+        axios({
+            method: 'post',
+            url: `/product/${shoppinglistID}`,
+            data: data
+        })
+        .then(response => response)
+        .catch( error => console.error(error))
+}
+
+
+export async function addShoppinglistByName(user, new_shoppinglist){
+    const userID = user._id
+
+    return await
+        axios({
+            method: 'post',
+            url: `/shoppinglist/${userID}`,
+            data: new_shoppinglist
+        })
+        .then( response => response)
+        .catch( error => console.error(error))
+}
+
+
+export async function addShoppinglistByID(user, id){
+    const userID = user._id
+}
+
+
 
 
 

@@ -15,11 +15,13 @@ import Signup from './containers/Signup';
 
 // HOOKS
 import useToken from './Hooks/useToken';
+import useUser from './Hooks/useUser';
 
 
 function App() {
 
     const { token, setToken } = useToken();
+    const {user, setUser} = useUser();
 
 
     if(!token){
@@ -29,10 +31,10 @@ function App() {
                     <Switch>
                         <Router>
                             <Route exact path="/">
-                                <Login setToken={setToken} />
+                                <Login setToken={setToken} setUser={setUser} />
                             </Route>
                             <Route path="/login">
-                                <Login setToken={setToken} />
+                                <Login setToken={setToken} setUser={setUser} />
                             </Route>
                             <Route exact path="/signup">
                                 <Signup />
@@ -46,22 +48,21 @@ function App() {
     }
     return (
     <div className="wrapper">
-        
         <Navigation />
         <BrowserRouter>
             <Switch>
                 <Router>
                     <Route exact path="/">
-                        <Home />
+                        <Home user={user} />
                     </Route>
                     <Route exact path="/home">
-                        <Home />
+                        <Home user={user} />
                     </Route>
                     <Route exact path="/shoppinglists">
-                        <MyLists />
+                        <MyLists user={user} />
                     </Route>
-                    <Route exact path="/shoppinglists/list">
-                        <ShoppinglistPage />
+                    <Route path="/shoppinglists/list">
+                        <ShoppinglistPage user={user} />
                     </Route>
                     <Route path="/login">
                         <Login setToken={setToken} />

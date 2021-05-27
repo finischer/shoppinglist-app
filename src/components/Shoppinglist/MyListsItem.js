@@ -13,7 +13,7 @@ export default class MyListsItem extends Component {
                     </div>
 
                     <div className="item-mylists">
-                        <Link to={`${window.location.pathname}/list/${this.props.name}`} > <p>{this.props.name} <span> {this.props.amount} <Arrow /> </span></p> </Link>
+                        <Link to={`${window.location.pathname}/list/?id=${this.props.id}`} > <p>{this.props.name} <span> {this.props.amount} <Arrow /> </span></p> </Link>
                         <hr />
                     </div>
                     

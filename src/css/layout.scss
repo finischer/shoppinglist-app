@@ -510,6 +510,24 @@ li{
 }
 
 
+.form-addShoppinglist{
+   ::placeholder{
+        color: $container-background;
+        opacity: 1;
+        font-style: italic;
+    } 
+}
+
+@media(max-width:620px){
+    #table-data-shoppinglist-id{
+        font-size: 9px;
+    }
+}
+
+
+
+
+
 
 
 

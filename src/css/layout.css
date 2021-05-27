@@ -459,4 +459,34 @@ li {
 .form-container #login-link {
   text-align: center;
 }
+
+.form-addShoppinglist ::-webkit-input-placeholder {
+  color: #021C1E;
+  opacity: 1;
+  font-style: italic;
+}
+
+.form-addShoppinglist :-ms-input-placeholder {
+  color: #021C1E;
+  opacity: 1;
+  font-style: italic;
+}
+
+.form-addShoppinglist ::-ms-input-placeholder {
+  color: #021C1E;
+  opacity: 1;
+  font-style: italic;
+}
+
+.form-addShoppinglist ::placeholder {
+  color: #021C1E;
+  opacity: 1;
+  font-style: italic;
+}
+
+@media (max-width: 620px) {
+  #table-data-shoppinglist-id {
+    font-size: 9px;
+  }
+}
 /*# sourceMappingURL=layout.css.map */

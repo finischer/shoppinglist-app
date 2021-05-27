@@ -27,7 +27,7 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <Headline title="Hallo, Niklas" />
+                <Headline title={`Hallo, ${this.props.user.vorname}`} />
                 <Subheadline title="Aktuelle Einkaufsliste" />
                 <Subheadline title="Meine Familie" />
                 <MeineFamilie />
