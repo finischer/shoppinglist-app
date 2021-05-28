@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {login} from '../api';
 import PropTypes from 'prop-types';
+import Headline from '../components/Headline';
 
 
 
@@ -11,8 +12,6 @@ export default function Login ({setToken, setUser}) {
 
     const handleSubmit = async e =>{
         e.preventDefault()
-        // const email = document.getElementById('email').value
-        // const passwort = document.getElementById('password').value
         
         const user = {
             email,
@@ -30,6 +29,7 @@ export default function Login ({setToken, setUser}) {
     if(!sessionToken){
         return (
             <div className="container form-container">
+                <h1> Login </h1>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="email"><b>E-Mail*</b></label>
                     <input id="email" type="text" placeholder="E-Mail eingeben" name="email" onChange={ e => setEmail(e.target.value)}  required />

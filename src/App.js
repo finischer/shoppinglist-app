@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Navigation from './components/Navigation';
+import Headline from './components/Headline';
 
 
 //Pages
@@ -32,8 +33,8 @@ function App() {
                 <BrowserRouter>
                     <Switch>
                         <Router>
-                            <Route exact path="/">
-                                <Login setToken={setToken} setUser={setUser} />
+                            <Route path="/">
+                                <Login setToken={setToken} setUser={setUser} />                   
                             </Route>
                             <Route path="/login">
                                 <Login setToken={setToken} setUser={setUser} />
