@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import {login} from '../api';
 import PropTypes from 'prop-types';
-import Headline from '../components/Headline';
 
 
 
