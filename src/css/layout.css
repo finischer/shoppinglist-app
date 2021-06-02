@@ -46,6 +46,11 @@ hr {
   color: white;
 }
 
+.btn-delete:hover {
+  background: #C42222;
+  cursor: not-allowed;
+}
+
 a:visited {
   color: white;
 }
