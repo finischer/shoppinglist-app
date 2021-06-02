@@ -4,7 +4,7 @@ axios.defaults.baseURL = 'https://famlist-backend.herokuapp.com/api'
 axios.defaults.headers['Access-Control-Allow-Origin'] = '*'
 
 export async function signup(user) {
-  
+    console.log(user)
     return await
     axios({
         method: 'post',
