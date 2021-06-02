@@ -89,7 +89,7 @@ export default class ShoppinglistInfo extends Component {
 
                             <tr>
                                 <td>Letzte Änderung von:</td>
-                                <td>{this.props.shoppinglist.letzte_aenderung_von}</td>
+                                <td id="table-data-letzte_aenderung_von">{this.props.shoppinglist.letzte_aenderung_von}</td>
                             </tr>
                         </tbody>
                     </table>
