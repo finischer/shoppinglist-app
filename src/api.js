@@ -46,6 +46,16 @@ export async function getShoppinglistsFromUser(user){
         .catch( error => console.error(error))
 }
 
+export async function getShoppinglist(shoppinglist_id){
+      return await
+        axios({
+            method: 'get',
+            url: `/shoppinglist/get/${shoppinglist_id}`
+        })
+        .then( response => response )
+        .catch( error => console.error(error))
+}
+
 
 export async function updateShoppinglist(shoppinglist){
     const shoppinglistID = shoppinglist._id
@@ -56,7 +66,7 @@ export async function updateShoppinglist(shoppinglist){
             url: `/shoppinglist/${shoppinglistID}`,
             data: shoppinglist
         })
-        .then( response => response )
+        .then( response => response)
         .catch( error => console.error(error))
 }
 
@@ -81,16 +91,54 @@ export async function addShoppinglistByName(user, new_shoppinglist){
             url: `/shoppinglist/${userID}`,
             data: new_shoppinglist
         })
-        .then( response => response)
-        .catch( error => console.error(error))
+        .then(response => response)
+        .catch(error => console.error(error))
+}
+
+export async function addShoppinglistByID(user_id, shoppinglist_id){
+    
+    const data = {
+        user_id,
+        items: {
+            _id: null,
+            product_name: null
+        },
+        checked: null,
+    }
+    console.log(user_id)
+    return await
+        axios({
+            method: 'put',
+            url: `/shoppinglist/${shoppinglist_id}`,
+            data
+        })
+        .then(response => response)
+        .catch(error => console.error(error))
 }
 
 
-// export async function addShoppinglistByID(user, id){
-//     return
-// }
+export async function getProducts(shoppinglist_id){
+    
+    return await
+        axios({
+            method: 'get',
+            url: `/products/${shoppinglist_id}`
+        })
+        .then(response => response)
+        .catch(error => console.error(error))
+}
 
 
+
+export async function getUser(user_id){
+    return await
+        axios({
+            method: 'get',
+            url: `/user/${user_id}`
+        })
+        .then(response => response)
+        .catch(error => console.error(error))
+}
 
 
 

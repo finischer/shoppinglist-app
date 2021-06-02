@@ -3,7 +3,7 @@ import CloseButton from '../Buttons/CloseButton'
 import Headline from '../Headline'
 
 
-import { addShoppinglistByName } from '../../api';
+import { addShoppinglistByID, addShoppinglistByName } from '../../api';
 
 
 
@@ -34,18 +34,17 @@ export default class AddShoppinglist extends Component {
         const listName = document.getElementById('shoppinglist-name').value
         const listID = document.getElementById('shoppinglist-id').value
         
-
         if(listID){
-
+            await addShoppinglistByID(this.props.user._id, listID)
         }else if(listName){
             const new_list = {
                 title: listName
             }
             
-            await addShoppinglistByName(this.props.user, new_list)
-
-            window.location.reload();
+            await addShoppinglistByName(this.props.user, new_list)  
         }
+
+        window.location.reload();
     }
 
     render() {
@@ -67,7 +66,7 @@ export default class AddShoppinglist extends Component {
                             <br/>
                             <br/>
                             <label htmlFor="shoppinglist-id"> Einkaufsliste nach ID hinzufügen</label><br/>
-                            <input disabled type="text" id="shoppinglist-id" name="shoppinglist-id" placeholder="Funktion bald verfügbar" />
+                            <input type="text" id="shoppinglist-id" name="shoppinglist-id" />
                             <button className="btn" type="submit"> Hinzufügen </button>
                         </form>
 

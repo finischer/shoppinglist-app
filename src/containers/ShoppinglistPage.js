@@ -18,7 +18,10 @@ export default class ShoppinglistPage extends Component {
             _id: '',
             title: '',
             items: [],
-            users: []
+            users: [],
+            erstellt: '',
+            letzte_aenderung: '',
+            letzte_aenderung_von: ''
         }
 
         this.handleClickAdd = this.handleClickAdd.bind(this);
@@ -33,20 +36,18 @@ export default class ShoppinglistPage extends Component {
     }
 
     handleClickAdd(){
-        const rand = Math.floor(Math.random() * 10000);
+        const rand = Math.floor(Math.random() * 1000000000000000000000000);
 
         var newProduct = {
-            product_id: rand.toString(),
-            name: "Produkt hinzufügen",
-            hinzugefügt: "21.05.2021",
-            done: false
+            _id: rand.toString(),
+            product_name: "Produkt hinzufügen",
+            hinzugefuegt: "21.05.2021",
+            checked: false
         };
 
         this.setState({
             items: [...this.state.items, newProduct ]
-        });
-
-        updateShoppinglist(this.state)
+        }, () => {updateShoppinglist(this.state)});
 
     }
 
@@ -61,28 +62,20 @@ export default class ShoppinglistPage extends Component {
                         _id: shoppinglist._id,
                         title: shoppinglist.title,
                         items: shoppinglist.items,
-                        users: shoppinglist.users
+                        users: shoppinglist.users,
+                        erstellt: shoppinglist.erstellt,
+                        letzte_aenderung: shoppinglist.letzte_aenderung,
+                        letzte_aenderung_von: shoppinglist.letzte_aenderung_von
                     })
                 }
         }
     }
-
-    componentWillUnmount(){
-        this.setState({
-            _id: '',
-            title: '',
-            items: [],
-            users: []
-        })
-    }
-
-  
     
     
     render() {
         return (
             <div className="shoppinglistpage">
-                <ShoppinglistInfo shoppinglist={this.state} />
+                <ShoppinglistInfo shoppinglist={this.state} user={this.props.user} />
                 <Headline title="Einkaufslisten" />
                 
 

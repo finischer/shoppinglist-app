@@ -3,13 +3,39 @@ import DeleteButton from '../Buttons/DeleteButton'
 import StandardButton from '../Buttons/StandardButton'
 import Headline from '../Headline'
 
+import {getUser} from '../../api';
+import {getShoppinglistsFromUser} from '../../api';
+
+
 export default class ShoppinglistInfo extends Component {
     
     constructor(props){
         super(props);
-        
+        this.state = {
+            users: []
+        }
+
         this.handleClickClose = this.handleClickClose.bind(this);
     }
+
+    async componentDidMount(){
+        var W = window.location.search.split("=")
+        const response = await getShoppinglistsFromUser(this.props.user)
+        const shoppinglist = response.data.filter( (list) => list._id === W[1])[0]
+        const users = shoppinglist.users
+        
+        for(var i=0; i<users.length; i++){
+            const user = await getUser(users[i])
+            .then( res => res)
+            .catch(err => console.error(err))
+            
+            this.setState({
+                users: [...this.state.users, user.data.vorname]
+            })
+        }     
+    }
+
+
 
     handleClickClose(){
         var modal = document.getElementsByClassName("modal");
@@ -18,6 +44,8 @@ export default class ShoppinglistInfo extends Component {
             modal[i].style.display = 'none';
         }
     }
+
+
     
     render() {
         return (
@@ -37,35 +65,31 @@ export default class ShoppinglistInfo extends Component {
 
                             <tr>
                                 <td>Erstellt am:</td>
-                                <td>17.05.2021</td>
+                                <td>{this.props.shoppinglist.erstellt}</td>
                             </tr>
 
                             <tr>
                                 <td>Anzahl Produkte:</td>
                                 <td>{this.props.shoppinglist.items.length}</td>
                             </tr>
-
+                            
                             <tr>
-                                <td>Mitglieder:</td>
-                                <td>Niklas Fischer </td>
+                                <td>Mitglieder:</td> 
+                                <td> {this.state.users.map( (user, index) => {
+                                    
+                                    if(index === this.state.users.length-1) return <span key={user}> {user} </span>;
+                                    return <span key={user}> {user}, </span>;
+                                })}</td>
                             </tr>
-                            <tr>
-                                <td></td>
-                                <td>Daniela Fischer </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Gerrik Fischer </td>
-                            </tr>
-
+                            
                             <tr>
                                 <td>Aktualisiert:</td>
-                                <td>17.05.2021</td>
+                                <td>{this.props.shoppinglist.letzte_aenderung}</td>
                             </tr>
 
                             <tr>
                                 <td>Letzte Änderung von:</td>
-                                <td>Niklas Fischer</td>
+                                <td>{this.props.shoppinglist.letzte_aenderung_von}</td>
                             </tr>
                         </tbody>
                     </table>
