@@ -13,8 +13,8 @@ export default class Signup extends Component {
     handleSubmit(){
         
         const vorname = document.getElementById('vorname').value
-        const email = document.getElementById('email').value
-        const passwort = document.getElementById('password').value
+        const email = document.getElementById('email-signup').value
+        const passwort = document.getElementById('password-signup').value
         
         const user = {
             vorname,
@@ -36,13 +36,13 @@ export default class Signup extends Component {
                     <input id="vorname" type="text" placeholder="Vornamen eingeben" name="vorname"  required />
 
                     <label htmlFor="email"><b>E-Mail*</b></label>
-                    <input id="email" type="text" placeholder="E-Mail eingeben" name="email"  required />
+                    <input id="email-signup" type="text" placeholder="E-Mail eingeben" name="email"  required />
 
                     <label htmlFor="password"><b>Password*</b></label>
-                    <input id="password" type="password" placeholder="Passwort eingeben" name="passwort" required />
+                    <input id="password-signup" type="password" placeholder="Passwort eingeben" name="passwort" required />
 
                     <label htmlFor="password"><b>Password wiederholen*</b></label>
-                    <input id="password-repeat" type="password" placeholder="Passwort wiederholen" name="passwort-repeat" required />     
+                    <input id="password-repeat-signup" type="password" placeholder="Passwort wiederholen" name="passwort-repeat" required />     
 
                     <button className="btn btn-signup" type="submit">Registrieren</button>
                     <p id="login-link">Bereits ein Account? <br /> <a href="/login">Einloggen</a></p>
