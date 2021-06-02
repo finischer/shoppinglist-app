@@ -12,6 +12,7 @@ export async function signup(user) {
         data: user,
     })
     .then( response => {
+        console.log(response)
         window.location = '/login' 
     })
     .catch(function (error) {

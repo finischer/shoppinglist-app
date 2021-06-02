@@ -10,11 +10,14 @@ export default class Signup extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     
-    handleSubmit(){
-        
+    async handleSubmit(e){
+       
+
         const vorname = document.getElementById('vorname').value
         const email = document.getElementById('email-signup').value
         const passwort = document.getElementById('password-signup').value
+
+        e.preventDefault()
         
         const user = {
             vorname,
@@ -22,7 +25,7 @@ export default class Signup extends Component {
             passwort
         };
          
-        signup(user);
+        await signup(user);
     }
 
     
